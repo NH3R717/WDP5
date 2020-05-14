@@ -28,6 +28,6 @@ const styles = {
     height: '195px',
     width: '195px',
     background: 'rgb(213, 213, 213)',
-    borderRadius: '.6em'
+    borderRadius: '1em'
     }
 } 

@@ -15,7 +15,6 @@ const Name = props => {
     <div style={styles.buttonsDiv}>
       <button style={styles.buttonSend}>Send</button>
       <button style={styles.buttonSave}>Save</button>
-      {/* <button style={styles.button}>Down</button> */}
       <img src={Download} alt="Info" style={styles.download} />
     </div>
   )
@@ -28,6 +27,7 @@ const styles = {
     
   },
   buttonSend: {
+    dispay: 'inline',
     marginRight: '.5em',
     background: 'rgb(237 237 237)',
     color: 'rgb(081 081 081)',
@@ -42,6 +42,14 @@ const styles = {
     borderRadius: '.3em'
   },
   download: {
-    
+    paddingTop: ".2em",
+    margin: '0',
+    // color: 'rgb(081 081 081)',
+
+  // position: 'absolute',
+  // top: '50%'
+  },
+  downloadDiv: {
+    // paddingTop: ".5em"
   }
 } 

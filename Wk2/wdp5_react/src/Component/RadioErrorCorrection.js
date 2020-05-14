@@ -19,7 +19,7 @@ const Name = props => {
         name="Error Correction"
         value={props.postTitle}
         onChange={props.liveUpdateTitle}
-        placeholder=" Error Correction" />
+        placeholder=" Error Correct" />
     </form>
   )
 }

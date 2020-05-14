@@ -7,7 +7,6 @@
    */
 
 import React from 'react'
-import QRPlaceholder from '../images/QRPlaceholder.svg'
 
 // Functional Component
 const Name = props => {

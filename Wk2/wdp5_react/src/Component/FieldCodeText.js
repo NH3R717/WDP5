@@ -7,7 +7,6 @@
    */
 
 import React from 'react'
-import QRPlaceholder from '../images/QRPlaceholder.svg'
 
 // Functional Component
 const Name = props => {
@@ -37,4 +36,3 @@ const styles = {
     resize: 'none'
   }
 } 
-{/* <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea> */}
