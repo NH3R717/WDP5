@@ -11,28 +11,37 @@ import React from 'react'
 // Functional Component
 const Name = props => {
   return (
+    
     <form id="format" style={styles.fileFormatDiv}>
-      <input type='radio'
-        for="format"
-        name="format"
-        style={styles.input}
-        value={props.postTitle}
-        onChange={props.liveUpdateTitle} />
-      <label style={styles.label}>svg</label>
-      <input type='radio'
-        for="format"
-        name="format"
-        style={styles.input}
-        value={props.postTitle}
-        onChange={props.liveUpdateTitle} />
-      <label style={styles.label}>png</label>
-      <input type='radio'
-        for="format"
-        name="format"
-        style={styles.input}
-        value={props.postTitle}
-        onChange={props.liveUpdateTitle} />
-      <label style={styles.label}>jpg</label>
+      <h1 style={styles.H2}>File Format</h1>
+      <div style={styles.inputLabel}>
+        <input type='radio'
+          for="format"
+          name="format"
+          style={styles.input}
+          value={props.postTitle}
+          onChange={props.liveUpdateTitle} />
+        <label style={styles.label}>svg</label>
+      </div>
+      <div style={styles.inputLabel}>
+
+        <input type='radio'
+          for="format"
+          name="format"
+          style={styles.input}
+          value={props.postTitle}
+          onChange={props.liveUpdateTitle} />
+        <label style={styles.label}>png</label>
+      </div>
+      <div style={styles.inputLabel}>
+        <input type='radio'
+          for="format"
+          name="format"
+          style={styles.input}
+          value={props.postTitle}
+          onChange={props.liveUpdateTitle} />
+        <label style={styles.label}>jpg</label>
+      </div>
     </form>
     // <form style={styles.fileFormatDiv}>
     //   <input type='text'
@@ -47,14 +56,22 @@ export default Name
 
 const styles = {
   fileFormatDiv: {
+    color: 'rgb(081 081 081)',
     display: 'block',
-    margin: '0 auto'
+    margin: '.4em auto'
+  },
+  inputLabel: {
+    display: 'inline-block',
+    margin: '.3em .5em 0 0'
   },
   input: {
-    display: 'inline-block',
-    margin: '0 .2em',
+    display: 'block',
+    textAlign: 'center',
+    margin: 'auto'
   },
   label: {
-    marginRight: '.2em',
+    margin: '0.5em auto',
+    textAlign: 'center'
+    // marginRight: '.4em',
   },
 }
