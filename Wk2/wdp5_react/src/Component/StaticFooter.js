@@ -7,23 +7,25 @@
    */
 
 import React from 'react'
-import QRPlaceholder from '../images/QRPlaceholder.svg'
 
   // Functional Component
   const Name = props => {
-      return (
-        <div>
-        <img src={QRPlaceholder} alt="QR Code" style={styles.QRCode} />
-    </div>
-      )
+    return (
+      <div style={styles.headerDiv}>
+        <h3 style={styles.h1}>© 2020 Supers Cafe</h3>
+      </div>
+    )
   }
   export default Name
   
-const styles = {
+  const styles = {
+    headerDiv: {
+      display: 'flex'
+    },
     QRCode: {
     },
-    element2: {
-        display: 'flex',
-        margin: '1em 0 0 0'
+    Ellipsis: {
+      display: 'flex',
+      margin: '1em 0 0 0'
     }
-} 
+  } 

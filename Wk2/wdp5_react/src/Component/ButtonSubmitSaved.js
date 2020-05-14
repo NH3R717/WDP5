@@ -7,23 +7,29 @@
    */
 
 import React from 'react'
-import QRPlaceholder from '../images/QRPlaceholder.svg'
+import Ellipsis from '../images/download.svg'
 
-  // Functional Component
-  const Name = props => {
-      return (
-        <div>
-        <img src={QRPlaceholder} alt="QR Code" style={styles.QRCode} />
+// Functional Component
+const Name = props => {
+  return (
+    <div style={styles.button}>
+      <button style={styles.button}>Send</button>
+      <button style={styles.button}>Save</button>
+      {/* <button style={styles.button}>Down</button> */}
+      <img src={Ellipsis} alt="Info" style={styles.Ellipsis} />
     </div>
-      )
-  }
-  export default Name
-  
+  )
+}
+export default Name
+
 const styles = {
-    QRCode: {
-    },
-    element2: {
-        display: 'flex',
-        margin: '1em 0 0 0'
-    }
+
+  buttonDiv: {
+  },
+  button: {
+  },
+  download: {
+    display: 'flex',
+    margin: '1em 0 0 0'
+  }
 } 

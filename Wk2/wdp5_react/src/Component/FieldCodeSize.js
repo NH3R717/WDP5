@@ -9,21 +9,26 @@
 import React from 'react'
 import QRPlaceholder from '../images/QRPlaceholder.svg'
 
-  // Functional Component
-  const Name = props => {
-      return (
-        <div>
-        <img src={QRPlaceholder} alt="QR Code" style={styles.QRCode} />
+// Functional Component
+const Name = props => {
+  return (
+    <div style={styles.codeSizeDiv}>
+      <input type='text'
+        style={styles.input}
+        name="QR Code Size"
+        value={props.postTitle}
+        onChange={props.liveUpdateTitle}
+        placeholder="Code Size" />
     </div>
-      )
-  }
-  export default Name
-  
+  )
+}
+export default Name
+
 const styles = {
-    QRCode: {
-    },
-    element2: {
-        display: 'flex',
-        margin: '1em 0 0 0'
-    }
-} 
+  codeSizeDiv: {
+  },
+  element2: {
+    display: 'flex',
+    margin: '1em 0 0 0'
+  }
+}

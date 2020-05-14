@@ -6,12 +6,12 @@ import SubmitSaved from './Component/ButtonSubmitSaved.js'
 import CodeName from './Component/FieldCodeName.js'
 import CodeData from './Component/FieldCodeData.js'
 import CodeSize from './Component/FieldCodeSize.js'
-import Foreground from './Component/StaticHeader.js'
-import Background from './Component/StaticHeader.js'
-import FileFormat from './Component/StaticHeader.js'
-import ErrorCorrection from './Component/StaticHeader.js'
-import MarginArea from './Component/ImageQRCode.js'
-import Footer from './Component/ImageQRCode.js'
+import QRForeground from './Component/ButtonForeground.js'
+import QRBackground from './Component/ButtonBackground.js'
+import FileFormat from './Component/RadioFileFormat.js'
+import ErrorCorrection from './Component/RadioMargin.js'
+import MarginArea from './Component/RadioMargin.js'
+import Footer from './Component/StaticFooter.js'
 
 
 class App extends Component {
@@ -25,10 +25,10 @@ class App extends Component {
         <CodeName />
         <CodeData />
         <CodeSize />
-        <Foreground />
-        <Background />
+        <QRForeground />
+        <QRBackground />
         <FileFormat />
-        <ErrorCorrection />
+        {/* <ErrorCorrection /> */}
         <MarginArea />
         <Footer />
         

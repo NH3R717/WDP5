@@ -8,19 +8,26 @@
 
 import React from 'react'
 
-  // Functional Component
-  const Name = props => {
-      return (
-        <div>
-          <button src={QRPlaceholder} alt="QR Code" style={styles.QRCode} />
-          
+// Functional Component
+const Name = props => {
+  return (
+    <div style={styles.backgroundColorDiv}>
+      <input type='text'
+        style={styles.input}
+        name="QR Code Background Color"
+        value={props.postTitle}
+        onChange={props.liveUpdateTitle}
+        placeholder="Background Color Hex" />
     </div>
-      )
-  }
-  export default Name
-  
+  )
+}
+export default Name
+
 const styles = {
-    QRCode: {
-  
-    }
-} 
+  backgroundColorDiv: {
+  },
+  element2: {
+    display: 'flex',
+    margin: '1em 0 0 0'
+  }
+}

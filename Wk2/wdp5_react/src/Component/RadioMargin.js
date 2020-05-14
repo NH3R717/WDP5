@@ -11,19 +11,24 @@ import QRPlaceholder from '../images/QRPlaceholder.svg'
 
   // Functional Component
   const Name = props => {
-      return (
-        <div>
-        <img src={QRPlaceholder} alt="QR Code" style={styles.QRCode} />
-    </div>
-      )
+    return (
+      <div style={styles.marginSizeDiv}>
+        <input type='text'
+          style={styles.input}
+          name="Margin Size"
+          value={props.postTitle}
+          onChange={props.liveUpdateTitle}
+          placeholder="Margin Size" />
+      </div>
+    )
   }
   export default Name
   
-const styles = {
-    QRCode: {
+  const styles = {
+    marginSizeDiv: {
     },
     element2: {
-        display: 'flex',
-        margin: '1em 0 0 0'
+      display: 'flex',
+      margin: '1em 0 0 0'
     }
-} 
+  }
