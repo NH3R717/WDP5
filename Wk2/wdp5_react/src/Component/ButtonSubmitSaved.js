@@ -7,16 +7,16 @@
    */
 
 import React from 'react'
-import Ellipsis from '../images/download.svg'
+import Download from '../images/download.svg'
 
 // Functional Component
 const Name = props => {
   return (
     <div style={styles.button}>
-      <button style={styles.button}>Send</button>
-      <button style={styles.button}>Save</button>
+      <button style={styles.buttonSend}>Send</button>
+      <button style={styles.buttonSave}>Save</button>
       {/* <button style={styles.button}>Down</button> */}
-      <img src={Ellipsis} alt="Info" style={styles.Ellipsis} />
+      <img src={Download} alt="Info" style={styles.download} />
     </div>
   )
 }
@@ -25,11 +25,15 @@ export default Name
 const styles = {
 
   buttonDiv: {
+    
   },
-  button: {
+  buttonSend: {
+    marginRight: '.5em'
+  },
+  buttonSave: {
+    marginRight: '.5em'
   },
   download: {
-    display: 'flex',
-    margin: '1em 0 0 0'
+    
   }
 } 

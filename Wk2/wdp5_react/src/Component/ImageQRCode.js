@@ -12,8 +12,8 @@ import QRPlaceholder from '../images/QRPlaceholder.svg'
   // Functional Component
   const Name = props => {
       return (
-        <div>
-        <img src={QRPlaceholder} alt="QR Code" style={styles.QRCode} />
+        <div style={styles.imageContainer} >
+        <img src={QRPlaceholder} height="175" width="175" alt="QR Code" style={styles.QRCode} />
     </div>
       )
   }
@@ -22,8 +22,12 @@ import QRPlaceholder from '../images/QRPlaceholder.svg'
 const styles = {
     QRCode: {
     },
-    element2: {
-        display: 'flex',
-        margin: '1em 0 0 0'
+  imageContainer: {
+    margin: '1em auto 1em auto',
+    paddingTop: '.38em',
+    height: '195px',
+    width: '195px',
+    background: 'rgb(213, 213, 213)',
+    borderRadius: '.6em'
     }
 } 

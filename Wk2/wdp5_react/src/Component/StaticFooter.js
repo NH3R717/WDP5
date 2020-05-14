@@ -8,24 +8,28 @@
 
 import React from 'react'
 
-  // Functional Component
-  const Name = props => {
-    return (
-      <div style={styles.headerDiv}>
-        <h3 style={styles.h1}>© 2020 Supers Cafe</h3>
-      </div>
-    )
+// Functional Component
+const Name = props => {
+  return (
+    <div style={styles.footerDiv}>
+      <h3 style={styles.h3}>© 2020 Supers Cafe</h3>
+    </div>
+  )
+}
+export default Name
+
+const styles = {
+footerDiv: {
+    display: 'flex',
+    
+    background: 'rgb(173, 173, 173)',
+
+  },
+  h3: {
+    float: 'right'
+  },
+  Ellipsis: {
+    display: 'flex',
+    margin: '1em 0 0 0'
   }
-  export default Name
-  
-  const styles = {
-    headerDiv: {
-      display: 'flex'
-    },
-    QRCode: {
-    },
-    Ellipsis: {
-      display: 'flex',
-      margin: '1em 0 0 0'
-    }
-  } 
+} 
