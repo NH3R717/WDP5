@@ -12,14 +12,14 @@ import QRPlaceholder from '../images/QRPlaceholder.svg'
   // Functional Component
   const Name = props => {
     return (
-      <div style={styles.marginSizeDiv}>
+      <form style={styles.marginSizeDiv}>
         <input type='text'
           style={styles.input}
           name="Margin Size"
           value={props.postTitle}
           onChange={props.liveUpdateTitle}
           placeholder="Margin Size" />
-      </div>
+      </form>
     )
   }
   export default Name

@@ -11,14 +11,14 @@ import React from 'react'
 // Functional Component
 const Name = props => {
   return (
-    <div style={styles.foregroundColorDiv}>
+    <form style={styles.foregroundColorDiv}>
       <input type='text'
         style={styles.input}
         name="QR Code Background Color"
         value={props.postTitle}
         onChange={props.liveUpdateTitle}
         placeholder="Foreground Color Hex" />
-    </div>
+    </form>
   )
 }
 export default Name

@@ -4,7 +4,7 @@ import Header from './Component/StaticHeader.js'
 import QRImage from './Component/ImageQRCode.js'
 import SubmitSaved from './Component/ButtonSubmitSaved.js'
 import CodeName from './Component/FieldCodeName.js'
-import CodeData from './Component/FieldCodeData.js'
+import CodeData from './Component/FieldCodeText.js'
 import CodeSize from './Component/FieldCodeSize.js'
 import QRForeground from './Component/ButtonForeground.js'
 import QRBackground from './Component/ButtonBackground.js'
@@ -51,9 +51,11 @@ export default App;
 const styles = {
   imageButtons: {
     margin: '1em auto 1em auto',
+    
   },
   codeNameData: {
     margin: '1em auto 1em auto',
+    
   },
   sizeFormat: {
     margin: '1em auto 1em auto',

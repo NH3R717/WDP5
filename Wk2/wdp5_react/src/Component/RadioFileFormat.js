@@ -11,14 +11,13 @@ import React from 'react'
   // Functional Component
   const Name = props => {
     return (
-      <div style={styles.fileFormatDiv}>
-        <input type='text'
+      <form style={styles.fileFormatDiv}>
+        <input type='radio'
           style={styles.input}
-          name="File Format"
           value={props.postTitle}
           onChange={props.liveUpdateTitle}
           placeholder="Saved File Format" />
-      </div>
+      </form>
     )
   }
   export default Name

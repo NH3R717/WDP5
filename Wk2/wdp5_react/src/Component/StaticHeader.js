@@ -30,7 +30,7 @@ const styles = {
     // border: '1px solid rgb(112, 112, 112)'
   },
   h1: {
-    lineHeight: '90%',
+    lineHeight: '100%',
     marginLeft: '.5em'
   },
   ellipsis: {

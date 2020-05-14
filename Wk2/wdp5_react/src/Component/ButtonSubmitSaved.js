@@ -12,7 +12,7 @@ import Download from '../images/download.svg'
 // Functional Component
 const Name = props => {
   return (
-    <div style={styles.button}>
+    <div style={styles.buttonsDiv}>
       <button style={styles.buttonSend}>Send</button>
       <button style={styles.buttonSave}>Save</button>
       {/* <button style={styles.button}>Down</button> */}
@@ -24,14 +24,22 @@ export default Name
 
 const styles = {
 
-  buttonDiv: {
+  buttonsDiv: {
     
   },
   buttonSend: {
-    marginRight: '.5em'
+    marginRight: '.5em',
+    background: 'rgb(237 237 237)',
+    color: 'rgb(081 081 081)',
+    width: '3.5em',
+    borderRadius: '.3em'
   },
   buttonSave: {
-    marginRight: '.5em'
+    marginRight: '.5em',
+    background: 'rgb(237 237 237)',
+    color: 'rgb(081 081 081)',
+    width: '3.5em',
+    borderRadius: '.3em'
   },
   download: {
     

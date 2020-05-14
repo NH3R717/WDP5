@@ -13,14 +13,14 @@ import React from 'react'
 // Functional Component
 const Name = props => {
   return (
-    <div style={styles.fileFormatDiv}>
+    <form style={styles.fileFormatDiv}>
       <input type='text'
         style={styles.input}
         name="Error Correction"
         value={props.postTitle}
         onChange={props.liveUpdateTitle}
         placeholder="Error Correction" />
-    </div>
+    </form>
   )
 }
 export default Name

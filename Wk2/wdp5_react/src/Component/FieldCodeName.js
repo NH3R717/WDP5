@@ -12,23 +12,34 @@ import QRPlaceholder from '../images/QRPlaceholder.svg'
 // Functional Component
 const Name = props => {
   return (
-    <div style={styles.codeNameDiv}>
+    <form style={styles.codeNameDiv}>
       <input type='text'
         style={styles.input}
         name="QR Code Name"
         value={props.postTitle}
         onChange={props.liveUpdateTitle}
-        placeholder="Code Name" />
-    </div>
+        placeholder=" Code Name"
+        
+      />
+    </form>
   )
 }
 export default Name
 
 const styles = {
   codeNameDiv: {
+    // display: 'flex',
+    // width: '20px'
   },
-  element2: {
-    display: 'flex',
-    margin: '1em 0 0 0'
+  input: {
+    'width': '90%',
+    'maxWidth': '10em',
+    borderRadius: '.3em'
   }
-} 
+
+  
+}
+// ::placeholder { 
+//   color: red;
+
+// }
