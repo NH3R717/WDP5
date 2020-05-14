@@ -8,25 +8,27 @@
 
 import React from 'react'
 
-  // Functional Component
-  const Name = props => {
-    return (
-      <form style={styles.fileFormatDiv}>
-        <input type='radio'
-          style={styles.input}
-          value={props.postTitle}
-          onChange={props.liveUpdateTitle}
-          placeholder="Saved File Format" />
-      </form>
-    )
+// Functional Component
+const Name = props => {
+  return (
+    <form style={styles.fileFormatDiv}>
+      <input type='text'
+        style={styles.input}
+        value={props.postTitle}
+        onChange={props.liveUpdateTitle}
+        placeholder=" File Format" />
+    </form>
+  )
+}
+export default Name
+
+const styles = {
+  fileFormatDiv: {
+  },
+  input: {
+    marginBottom: '.2em',
+    'width': '80%',
+    'maxWidth': '13em',
+    borderRadius: '.3em'
   }
-  export default Name
-  
-  const styles = {
-    fileFormatDiv: {
-    },
-    element2: {
-      display: 'flex',
-      margin: '1em 0 0 0'
-    }
-  }
+}

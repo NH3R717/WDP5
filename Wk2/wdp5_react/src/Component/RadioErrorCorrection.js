@@ -19,7 +19,7 @@ const Name = props => {
         name="Error Correction"
         value={props.postTitle}
         onChange={props.liveUpdateTitle}
-        placeholder="Error Correction" />
+        placeholder=" Error Correction" />
     </form>
   )
 }
@@ -28,8 +28,10 @@ export default Name
 const styles = {
   fileFormatDiv: {
   },
-  element2: {
-    display: 'flex',
-    margin: '1em 0 0 0'
+  input: {
+    marginBottom: '.2em',
+    'width': '80%',
+    'maxWidth': '13em',
+    borderRadius: '.3em'
   }
 }

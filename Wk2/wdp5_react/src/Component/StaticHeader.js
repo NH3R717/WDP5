@@ -27,9 +27,9 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     background: 'rgb(173, 173, 173)',
-    // border: '1px solid rgb(112, 112, 112)'
   },
   h1: {
+    fontSize: '.95em',
     lineHeight: '100%',
     marginLeft: '.5em'
   },

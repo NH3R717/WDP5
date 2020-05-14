@@ -21,15 +21,11 @@ export default Name
 const styles = {
 footerDiv: {
     display: 'flex',
-    
-    background: 'rgb(173, 173, 173)',
-
+    padding: '.3em 0',
+    background: 'rgb(173, 173, 173)'
   },
   h3: {
-    float: 'right'
-  },
-  Ellipsis: {
-    display: 'flex',
-    margin: '1em 0 0 0'
+    fontSize: '.7em',
+    marginLeft: '.4em'
   }
 } 

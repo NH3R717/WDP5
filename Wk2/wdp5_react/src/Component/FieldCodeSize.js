@@ -18,7 +18,7 @@ const Name = props => {
         name="QR Code Size"
         value={props.postTitle}
         onChange={props.liveUpdateTitle}
-        placeholder="Code Size" />
+        placeholder=" Code Size" />
     </form>
   )
 }
@@ -27,8 +27,10 @@ export default Name
 const styles = {
   codeSizeDiv: {
   },
-  element2: {
-    display: 'flex',
-    margin: '1em 0 0 0'
+  input: {
+    marginBottom: '.2em',
+    'width': '80%',
+    'maxWidth': '13em',
+    borderRadius: '.3em'
   }
 }

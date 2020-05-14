@@ -13,9 +13,10 @@ import QRPlaceholder from '../images/QRPlaceholder.svg'
 const Name = props => {
   return (
     <form style={styles.codeTextDiv}>
-      <input type='text'
+      <textarea
         style={styles.input}
         name="QR Code Text"
+        rows="10" cols="30"
         value={props.postTitle}
         onChange={props.liveUpdateTitle}
         placeholder=" Code Text" />
@@ -28,8 +29,12 @@ const styles = {
   codeTextDiv: {
   },
   input: {
-    'width': '90%',
-    'maxWidth': '10em',
-    borderRadius: '.3em'
+    
+    marginBottom: '.2em',
+    'width': '78.5%',
+    'maxWidth': '25em',
+    borderRadius: '1em',
+    resize: 'none'
   }
 } 
+{/* <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea> */}

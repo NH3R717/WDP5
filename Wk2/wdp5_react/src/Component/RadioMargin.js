@@ -9,26 +9,28 @@
 import React from 'react'
 import QRPlaceholder from '../images/QRPlaceholder.svg'
 
-  // Functional Component
-  const Name = props => {
-    return (
-      <form style={styles.marginSizeDiv}>
-        <input type='text'
-          style={styles.input}
-          name="Margin Size"
-          value={props.postTitle}
-          onChange={props.liveUpdateTitle}
-          placeholder="Margin Size" />
-      </form>
-    )
+// Functional Component
+const Name = props => {
+  return (
+    <form style={styles.marginSizeDiv}>
+      <input type='text'
+        style={styles.input}
+        name="Margin Size"
+        value={props.postTitle}
+        onChange={props.liveUpdateTitle}
+        placeholder=" Margin Size" />
+    </form>
+  )
+}
+export default Name
+
+const styles = {
+  marginSizeDiv: {
+  },
+  input: {
+    marginBottom: '.2em',
+    'width': '80%',
+    'maxWidth': '13em',
+    borderRadius: '.3em'
   }
-  export default Name
-  
-  const styles = {
-    marginSizeDiv: {
-    },
-    element2: {
-      display: 'flex',
-      margin: '1em 0 0 0'
-    }
-  }
+}

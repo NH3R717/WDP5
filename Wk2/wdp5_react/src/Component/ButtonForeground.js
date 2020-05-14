@@ -17,7 +17,7 @@ const Name = props => {
         name="QR Code Background Color"
         value={props.postTitle}
         onChange={props.liveUpdateTitle}
-        placeholder="Foreground Color Hex" />
+        placeholder=" FG Color" />
     </form>
   )
 }
@@ -26,8 +26,10 @@ export default Name
 const styles = {
   foregroundColorDiv: {
   },
-  element2: {
-    display: 'flex',
-    margin: '1em 0 0 0'
+  input: {
+    marginBottom: '.2em',
+    'width': '80%',
+    'maxWidth': '13em',
+    borderRadius: '.3em'
   }
 }

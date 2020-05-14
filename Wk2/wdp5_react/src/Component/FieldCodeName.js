@@ -32,8 +32,9 @@ const styles = {
     // width: '20px'
   },
   input: {
-    'width': '90%',
-    'maxWidth': '10em',
+    marginBottom: '.2em',
+    'width': '80%',
+    'maxWidth': '13em',
     borderRadius: '.3em'
   }
 
