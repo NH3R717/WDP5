@@ -11,7 +11,6 @@ import React from 'react'
 // Functional Component
 const Name = props => {
   return (
-    
     <form id="format" style={styles.fileFormatDiv}>
       <h1 style={styles.H2}>File Format</h1>
       <div style={styles.inputLabel}>
@@ -19,17 +18,16 @@ const Name = props => {
           for="format"
           name="format"
           style={styles.input}
-          value={props.postTitle}
+          value='svg'
           onChange={props.liveUpdateTitle} />
         <label style={styles.label}>svg</label>
       </div>
       <div style={styles.inputLabel}>
-
         <input type='radio'
           for="format"
           name="format"
           style={styles.input}
-          value={props.postTitle}
+          value='png'
           onChange={props.liveUpdateTitle} />
         <label style={styles.label}>png</label>
       </div>
@@ -38,7 +36,7 @@ const Name = props => {
           for="format"
           name="format"
           style={styles.input}
-          value={props.postTitle}
+          value='jpg'
           onChange={props.liveUpdateTitle} />
         <label style={styles.label}>jpg</label>
       </div>
@@ -62,7 +60,7 @@ const styles = {
   },
   inputLabel: {
     display: 'inline-block',
-    margin: '.3em .5em 0 0'
+    margin: '0 .4em'
   },
   input: {
     display: 'block',
@@ -70,8 +68,8 @@ const styles = {
     margin: 'auto'
   },
   label: {
-    margin: '0.5em auto',
-    textAlign: 'center'
-    // marginRight: '.4em',
+    margin: '0 auto',
+    textAlign: 'center',
+    fontSize: '.7em'
   },
 }
