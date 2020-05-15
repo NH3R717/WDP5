@@ -11,8 +11,8 @@ import React from 'react'
 // Functional Component
 const Name = props => {
   return (
-    <form id="format" style={styles.fileFormatDiv}>
-      <h1 style={styles.H2}>File Format</h1>
+    <form id="format" style={styles.radioGroupDiv}>
+      <h2 style={styles.H2}>File Format</h2>
       <div style={styles.inputLabel}>
         <input type='radio'
           for="format"

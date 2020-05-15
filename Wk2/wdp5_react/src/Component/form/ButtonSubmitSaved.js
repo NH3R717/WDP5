@@ -40,14 +40,8 @@ const styles = {
     width: '3.5em',
     borderRadius: '.3em'
   },
-  download: {
+  downloadIcon: {
     paddingTop: ".2em",
     margin: '0',
-    // color: 'rgb(081 081 081)',
-
-  // position: 'absolute',
-  // top: '50%'
-  },
-  downloadDiv: {
   }
 } 

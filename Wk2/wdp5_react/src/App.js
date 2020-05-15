@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './Component/StaticHeader.js'
-import QRImage from './Component/ImageQRCode.js'
+import QRImage from './Component/form/ImageQRCode.js'
 import SubmitSaved from './Component/form/ButtonSubmitSaved.js'
 import CodeName from './Component/form/FieldCodeName.js'
 import CodeData from './Component/form/FieldCodeText.js'

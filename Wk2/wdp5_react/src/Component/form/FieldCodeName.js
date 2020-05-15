@@ -17,9 +17,7 @@ const Name = props => {
         name="QR Code Name"
         value={props.postTitle}
         onChange={props.liveUpdateTitle}
-        placeholder=" Code Name"
-        
-      />
+        placeholder=" Code Name" />
     </form>
   )
 }
@@ -35,7 +33,3 @@ const styles = {
     borderRadius: '.3em'
   }
 }
-// ::placeholder { 
-//   color: red;
-
-// }
