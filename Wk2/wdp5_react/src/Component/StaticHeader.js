@@ -26,11 +26,11 @@ const styles = {
     padding: '.4em 0',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    background: 'rgb(173, 173, 173)',
+    background: 'rgb(213 213 213)',
   },
   h1: {
     fontSize: '.95em',
-    lineHeight: '100%',
+    lineHeight: '120%',
     marginLeft: '.5em'
   },
   ellipsis: {

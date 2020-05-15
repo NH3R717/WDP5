@@ -22,7 +22,7 @@ const styles = {
 footerDiv: {
     display: 'flex',
     padding: '.3em 0',
-    background: 'rgb(173, 173, 173)'
+    background: 'rgb(213 213 213)'
   },
   h3: {
     fontSize: '.7em',

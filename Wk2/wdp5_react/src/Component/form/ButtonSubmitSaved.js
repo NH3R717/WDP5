@@ -7,7 +7,7 @@
    */
 
 import React from 'react'
-import Download from '../images/download.svg'
+import Download from './images/download.svg'
 
 // Functional Component
 const Name = props => {
@@ -49,6 +49,5 @@ const styles = {
   // top: '50%'
   },
   downloadDiv: {
-    // paddingTop: ".5em"
   }
 } 
