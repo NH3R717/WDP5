@@ -11,7 +11,7 @@ import React from 'react'
 // Functional Component
 const Name = props => {
   return (
-    <form id="format" style={styles.radioGroupDiv}>
+    <form id="format" style={styles.fileFormatDiv}>
       <h2 style={styles.H2}>File Format</h2>
       <div style={styles.inputLabel}>
         <input type='radio'
@@ -41,13 +41,6 @@ const Name = props => {
         <label style={styles.label}>jpg</label>
       </div>
     </form>
-    // <form style={styles.fileFormatDiv}>
-    //   <input type='text'
-    //     style={styles.input}
-    //     value={props.postTitle}
-    //     onChange={props.liveUpdateTitle}
-    //     placeholder="Saved File Format" />
-    // </form>
   )
 }
 export default Name

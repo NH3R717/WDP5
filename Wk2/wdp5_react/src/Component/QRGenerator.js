@@ -19,6 +19,7 @@ class Generator extends Component {
 
         return (
             <main>
+                
                 <form style={styles.inputForm}>
                     {/* QR Code Image and Send/Save Buttons */}
                     <section style={styles.qrCodeImageButtons}>
@@ -122,27 +123,128 @@ class Generator extends Component {
                                 </div>
                             </div>
                         </article>
-
-                        <article style={styles.imageColors}>>
-                        <div>
-
+                        {/* QR Code Image Colors*/}
+                        <article style={styles.imageColors}>
+                            {/* QR Code Image Foreground Color */}
+                            <div style={styles.imageForegroundColor}>
+                                <h1 style={styles.H2}>FG Color</h1>
+                                <div style={styles.inputLabel}>
+                                    <input type='radio'
+                                        for="format"
+                                        name="format"
+                                        style={styles.input}
+                                        value='svg'
+                                        onChange={props.liveUpdateTitle} />
+                                    <label style={styles.label}>Lt Grey</label>
+                                </div>
+                                <div style={styles.inputLabel}>
+                                    <input type='radio'
+                                        for="format"
+                                        name="format"
+                                        style={styles.input}
+                                        value='png'
+                                        onChange={props.liveUpdateTitle} />
+                                    <label style={styles.label}>Lt Blue</label>
+                                </div>
+                                <div style={styles.inputLabel}>
+                                    <input type='radio'
+                                        for="format"
+                                        name="format"
+                                        style={styles.input}
+                                        value='jpg'
+                                        onChange={props.liveUpdateTitle} />
+                                    <label style={styles.label}>Lt Red</label>
+                                </div>
                             </div>
-                            <div>
-
+                            {/* QR Code Image Background Color */}
+                            <div style={styles.imageBackgroundColor}>
+                                <h1 style={styles.H2}>BG Color</h1>
+                                <div style={styles.inputLabel}>
+                                    <input type='radio'
+                                        for="format"
+                                        name="format"
+                                        style={styles.input}
+                                        value='svg'
+                                        onChange={props.liveUpdateTitle} />
+                                    <label style={styles.label}>Dk Grey</label>
+                                </div>
+                                <div style={styles.inputLabel}>
+                                    <input type='radio'
+                                        for="format"
+                                        name="format"
+                                        style={styles.input}
+                                        value='png'
+                                        onChange={props.liveUpdateTitle} />
+                                    <label style={styles.label}>Dk Blue</label>
+                                </div>
+                                <div style={styles.inputLabel}>
+                                    <input type='radio'
+                                        for="format"
+                                        name="format"
+                                        style={styles.input}
+                                        value='jpg'
+                                        onChange={props.liveUpdateTitle} />
+                                    <label style={styles.label}>Dk Red</label>
+                                </div>
                             </div>
                         </article>
-
-                        <article style={styles.borderCorrection}>>
-                        <div>
-
+                        {/* QR Code Image Error Correction & Border */}
+                        <article style={styles.imageCorrectionBorder}>
+                            {/* QR Code Image Error Correction */}
+                            <div style={styles.imageCorrection}>
+                                <h1 style={styles.H2}>Error Correct</h1>
+                                <div style={styles.inputLabel}>
+                                    <input type='radio'
+                                        for="format"
+                                        name="format"
+                                        style={styles.input}
+                                        value='svg'
+                                        onChange={props.liveUpdateTitle} />
+                                    <label style={styles.label}>low</label>
+                                </div>
+                                <div style={styles.inputLabel}>
+                                    <input type='radio'
+                                        for="format"
+                                        name="format"
+                                        style={styles.input}
+                                        value='png'
+                                        onChange={props.liveUpdateTitle} />
+                                    <label style={styles.label}>high</label>
+                                </div>
                             </div>
-                            <div>
-
+                            {/* QR Code Image Border */}
+                            <div style={styles.imageBorder}>
+                                <h1 style={styles.H2}>Code Border</h1>
+                                <div style={styles.inputLabel}>
+                                    <input type='radio'
+                                        for="format"
+                                        name="format"
+                                        style={styles.input}
+                                        value='svg'
+                                        onChange={props.liveUpdateTitle} />
+                                    <label style={styles.label}>none</label>
+                                </div>
+                                <div style={styles.inputLabel}>
+                                    <input type='radio'
+                                        for="format"
+                                        name="format"
+                                        style={styles.input}
+                                        value='png'
+                                        onChange={props.liveUpdateTitle} />
+                                    <label style={styles.label}>thin</label>
+                                </div>
+                                <div style={styles.inputLabel}>
+                                    <input type='radio'
+                                        for="format"
+                                        name="format"
+                                        style={styles.input}
+                                        value='jpg'
+                                        onChange={props.liveUpdateTitle} />
+                                    <label style={styles.label}>thick</label>
+                                </div>
                             </div>
                         </article>
-
                     </section>
-
                 </form>
 
             </main>
@@ -230,12 +332,31 @@ const styles = {
         fontSize: '.7em'
     },
     // Image Size
-
+    // Image Size and Type
+    imageSizeType: {
+    },
+    // Radio Buttons
+    imageSize: {
+    },
+    // Radio Buttons
+    imageType: {
+    },
+    // Image Colors
+    imageColors: {
+    },
     // Image Foreground Color
-
+    imageForeground: {
+    },
     // Image Background Color
-
-    // Error Correction
-
-    // Border Thickness
+    imageBackground: {
+    },
+    // Image Border Correction
+    imageCorrectionBorder: {
+    },
+    // Image Border
+    imageCorrection: {
+    },
+    // Image Correction
+    imageBorder: {
+    }
 }
