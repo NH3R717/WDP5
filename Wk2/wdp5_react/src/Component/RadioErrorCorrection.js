@@ -54,6 +54,7 @@ const styles = {
     textAlign: 'center',
   },
   label: {
+    color: 'rgb(112 112 112)',
     margin: '0 auto',
     textAlign: 'center',
     fontSize: '.7em'

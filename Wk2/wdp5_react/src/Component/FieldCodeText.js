@@ -28,7 +28,6 @@ const styles = {
   codeTextDiv: {
   },
   input: {
-    
     marginBottom: '.2em',
     'width': '78.5%',
     'maxWidth': '25em',

@@ -27,8 +27,6 @@ export default Name
 
 const styles = {
   codeNameDiv: {
-    // display: 'flex',
-    // width: '20px'
   },
   input: {
     marginBottom: '.2em',
@@ -36,8 +34,6 @@ const styles = {
     'maxWidth': '13em',
     borderRadius: '.3em'
   }
-
-  
 }
 // ::placeholder { 
 //   color: red;
