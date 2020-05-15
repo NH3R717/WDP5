@@ -24,7 +24,6 @@ export default Name
 const styles = {
 
   buttonsDiv: {
-    
   },
   buttonSend: {
     dispay: 'inline',
