@@ -67,28 +67,3 @@ const styles = {
     fontSize: '.7em'
   },
 }
-
-// const Name = props => {
-//   return (
-//     <form style={styles.foregroundColorDiv}>
-//       <input type='text'
-//         style={styles.input}
-//         name="QR Code Background Color"
-//         value={props.postTitle}
-//         onChange={props.liveUpdateTitle}
-//         placeholder=" FG Color" />
-//     </form>
-//   )
-// }
-// export default Name
-
-// const styles = {
-//   foregroundColorDiv: {
-//   },
-//   input: {
-//     marginBottom: '.2em',
-//     'width': '80%',
-//     'maxWidth': '13em',
-//     borderRadius: '.3em'
-//   }
-// }
