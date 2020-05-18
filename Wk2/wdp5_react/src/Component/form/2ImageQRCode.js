@@ -6,7 +6,7 @@
    • Week 2 – Development Phase 1
    */
 
-  import React, { Component } from 'react'
+import React, { Component } from 'react'
 import QRPlaceholder from './images/QRPlaceholder.svg'
 // import APICall from './APICall.js'
 
@@ -15,12 +15,15 @@ import QRPlaceholder from './images/QRPlaceholder.svg'
 
 class QRCodeSection extends Component {
 
-  
-    render(){
+  getCode() {
+      
 
+    }
+
+    render(){
     return (
       <div style={styles.imageContainer} >
-        <img src={QRPlaceholder} height="175" width="175" alt="QR Code" style={styles.QRCode} />  
+        <img src={QRPlaceholder} height="175" width="175" alt="QR Code" style={styles.QRCode} />
       </div>
     )
   }
@@ -40,4 +43,3 @@ class QRCodeSection extends Component {
       borderRadius: '1em'
     }
   }
-
