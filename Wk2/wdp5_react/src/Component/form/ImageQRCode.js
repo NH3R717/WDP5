@@ -23,17 +23,26 @@ class QRCodeSection extends Component {
     let generateHTML = ''
 
     fetch(codeUrl, {
-        method: 'GET',
-        // headers: {
-        //     'Content-Type': 'img'
-        // },
-        mode: 'cors',
+      method: 'GET',
+      // headers: {
+      //     'Content-Type': 'img'
+      // },
+      mode: 'cors',
     })
-        .then(response => {
-            generateHTML(response);
-        })
-        .catch(error => console.log(`Error message ${error}`));
-    
+      .then(response => {
+        generateHTML(response);
+      })
+      .catch(error => console.log(`Error message ${error}`));
+    generateHTML = (data) => {
+      const html = `<img src=${data.url}height="175" width="175">`
+      console.log(data.url);
+      console.log(html);
+      console.log(codeUrl);
+      const qrElement = document.querySelector('footer');
+      console.log(qrElement);
+      qrElement.innerHTML = html;
+    }
+
     return (
       <div style={styles.imageContainer} >
         <img src={QRPlaceholder} height="175" width="175" alt="QR Code" style={styles.QRCode} />
