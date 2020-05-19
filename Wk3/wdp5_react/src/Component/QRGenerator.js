@@ -253,12 +253,6 @@ class Generator extends Component {
     }
 }
 
-// set up default radio values
-// rework saved u/i
-// circle I icon for info
-// favicon
-// 
-
 const styles = {
     inputForm: {
         // QR Code Image

@@ -7,23 +7,35 @@
    */
 
 import React from 'react'
-import QRPlaceholder from '../images/QRPlaceholder.svg'
+import Ellipsis from '../images/ellipsis-v.svg'
 
-  // Functional Component
-  const Name = props => {
-      return (
-        <div>
-        <img src={QRPlaceholder} alt="QR Code" style={styles.QRCode} />
+// Functional Component
+const Name = props => {
+  return (
+    <div style={styles.headerDiv}>
+      <h1 style={styles.h1}>QR Code Generator</h1>
+      <img src={Ellipsis} alt="Info" style={styles.ellipsis} />
     </div>
-      )
-  }
-  export default Name
-  
+  )
+}
+export default Name
+
 const styles = {
-    QRCode: {
-    },
-    element2: {
-        display: 'flex',
-        margin: '1em 0 0 0'
-    }
+  headerDiv: {
+    display: 'flex',
+    padding: '.4em 0',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    background: 'rgb(213 213 213)',
+  },
+  h1: {
+    fontSize: '.95em',
+    lineHeight: '120%',
+    marginLeft: '.5em'
+  },
+  ellipsis: {
+    display: '',
+    margin: '0 .4em 0 0'
+
+  }
 } 
