@@ -11,10 +11,7 @@ class Generator extends Component {
 
     }
 
-    constructor(props) {
-        super(props);
-    }
-
+   
     render() {
 
         return (
@@ -252,6 +249,8 @@ class Generator extends Component {
         )
     }
 }
+
+export default Generator
 
 const styles = {
     inputForm: {

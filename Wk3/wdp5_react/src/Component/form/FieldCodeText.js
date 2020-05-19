@@ -32,6 +32,9 @@ const styles = {
     'width': '78.5%',
     'maxWidth': '25em',
     borderRadius: '1em',
-    resize: 'none'
+    resize: 'none',
+    color: 'blue',
+    fontSize: '2em'
+
   }
 } 
