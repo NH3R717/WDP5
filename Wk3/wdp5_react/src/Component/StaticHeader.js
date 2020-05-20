@@ -26,7 +26,9 @@ const styles = {
     padding: '.4em 0',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    background: 'rgb(213 213 213)',
+    // background: 'rgb(213 213 213)',
+    background: 'rgba(213, 213, 213, 0.6)',
+    borderBottom: 'solid .03em'
   },
   h1: {
     fontSize: '.95em',

@@ -1,12 +1,13 @@
 body {
   margin: 0;
+  background-color: rgb(255, 240, 191) ;
   background:
   radial-gradient(#bac9f8  2px, transparent 4px),
   radial-gradient(#bac9f8 2px, transparent 4px),
-  linear-gradient(rgb(195, 232, 246) 4px, transparent 0),
+  linear-gradient(rgb(255, 240, 191) 4px, transparent 0),
   linear-gradient(45deg, transparent 74px, transparent 75px, #EDEDED 75px, #EDEDED 76px, transparent 77px, transparent 109px),
   linear-gradient(-45deg, transparent 75px, transparent 76px, #EDEDED 76px, #EDEDED 77px, transparent 78px, transparent 109px),
-  rgb(195, 232, 246);
+  rgb(255, 240, 191);
   background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 }

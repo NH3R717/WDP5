@@ -2,21 +2,21 @@ import React, { Component } from 'react'
 
 //image files
 import Download from '../images/download.svg'
-import QRCode from '../images/QRPlaceholder.svg'
+import QRPlaceholder from '../images/QRPlaceholder.svg'
 
 
-class Generator extends Component {
+class GeneratorComp extends Component {
     //create state object that will take code input values for concatenation to a url that will be sent to the QR Code API via GET fetch()
     state = {
 
     }
 
-   
+
     render() {
 
         return (
             <main>
-                
+
                 <form style={styles.inputForm}>
                     {/* QR Code Image and Send/Save Buttons */}
                     <section style={styles.qrCodeImageButtons}>
@@ -36,20 +36,20 @@ class Generator extends Component {
                         {/* QR Code Name Input */}
                         <article style={styles.codeName}>
                             <input type='text'
-                                style={styles.input}
+                                style={styles.fieldInput}
                                 name="QR Code Name"
-                                value={props.postTitle}
-                                onChange={props.liveUpdateTitle}
+                                // value={props.postTitle}
+                                // onChange={props.liveUpdateTitle}
                                 placeholder=" Code Name" />
                         </article>
                         {/* QR Code Text Input */}
-                        <article style={styles.codeText}>>
+                        <article style={styles.codeText}>
                         <textarea
-                                style={styles.input}
+                                style={styles.fieldInput}
                                 name="QR Code Text"
                                 rows="10" cols="30"
-                                value={props.postTitle}
-                                onChange={props.liveUpdateTitle}
+                                // value={props.postTitle}
+                                // onChange={props.liveUpdateTitle}
                                 placeholder=" Code Text" />
                         </article>
                     </section>
@@ -64,27 +64,30 @@ class Generator extends Component {
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='svg'
-                                        onChange={props.liveUpdateTitle} />
+                                    // onChange={props.liveUpdateTitle} 
+                                    />
                                     <label style={styles.label}>Small</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='png'
-                                        onChange={props.liveUpdateTitle} />
+                                    // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>Medium</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='jpg'
-                                        onChange={props.liveUpdateTitle} />
+                                    // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>Large</label>
                                 </div >
                             </div >
@@ -95,27 +98,30 @@ class Generator extends Component {
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='svg'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>svg</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='png'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>png</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='jpg'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>jpg</label>
                                 </div>
                             </div>
@@ -129,27 +135,30 @@ class Generator extends Component {
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='svg'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>Lt Grey</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='png'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>Lt Blue</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='jpg'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>Lt Red</label>
                                 </div>
                             </div>
@@ -160,27 +169,30 @@ class Generator extends Component {
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='svg'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>Dk Grey</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='png'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>Dk Blue</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='jpg'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>Dk Red</label>
                                 </div>
                             </div>
@@ -194,18 +206,20 @@ class Generator extends Component {
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='svg'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>low</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='png'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>high</label>
                                 </div>
                             </div>
@@ -216,27 +230,30 @@ class Generator extends Component {
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='svg'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>none</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='png'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>thin</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
                                         for="format"
                                         name="format"
-                                        style={styles.input}
+                                        style={styles.radioInput}
                                         value='jpg'
-                                        onChange={props.liveUpdateTitle} />
+                                        // onChange={props.liveUpdateTitle}
+                                    />
                                     <label style={styles.label}>thick</label>
                                 </div>
                             </div>
@@ -250,7 +267,7 @@ class Generator extends Component {
     }
 }
 
-export default Generator
+export default GeneratorComp
 
 const styles = {
     inputForm: {
@@ -270,7 +287,7 @@ const styles = {
     qrCodeButtons: {
     },
     buttonSend: {
-        dispay: 'inline',
+        display: 'inline',
         marginRight: '.5em',
         background: 'rgb(237 237 237)',
         color: 'rgb(081 081 081)',
@@ -288,30 +305,44 @@ const styles = {
         paddingTop: ".2em",
         margin: '0',
     },
+    // Text Input Fields
+    nameTextFields: {
+
+        margin: '1em auto',
+        width: '80%',
+        maxWidth: '13em',   
+        },
     // QR Code Name
     codeName: {
+        margin: '0 0 0 .21em'
     },
     input: {
         marginBottom: '.2em',
-        'width': '80%',
-        'maxWidth': '13em',
+        // 'width': '80%',
+        'width': '100%',
+        // 'maxWidth': '13em',
         borderRadius: '.3em'
     },
     // QR Code Text
     codeText: {
     },
-    input: {
+    fieldInput: {
         marginBottom: '.2em',
-        'width': '78.5%',
-        'maxWidth': '25em',
+        'width': '100%',
+        // width: '78.5%',
+        // maxWidth: '25em',
         borderRadius: '1em',
         resize: 'none'
     },
     // Radio Buttons
     H2: {
     },
+    radios: {
+        margin: '1em auto',
+        color: 'rgb(065 065 065)'
+    },
     radioGroupDiv: {
-        color: 'rgb(081 081 081)',
+        // color: 'rgb(081 081 081)',
         display: 'block',
         margin: '.4em auto'
     },
@@ -319,22 +350,22 @@ const styles = {
         display: 'inline-block',
         margin: '0 .4em'
     },
-    input: {
+    radioInput: {
         display: 'block',
         textAlign: 'center',
         margin: 'auto'
     },
     label: {
-        color: 'rgb(112 112 112)',
+        color: 'rgb(90 90 90)',
         margin: '0 auto',
         textAlign: 'center',
         fontSize: '.7em'
     },
-    // Image Size
+    // Radio Buttons
     // Image Size and Type
     imageSizeType: {
     },
-    // Radio Buttons
+    // Image Size
     imageSize: {
     },
     // Radio Buttons
