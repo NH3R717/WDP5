@@ -22,22 +22,22 @@ export default Name
 
 const styles = {
   headerDiv: {
+    color: 'rgb(065 065 065)',
     display: 'flex',
     padding: '.4em 0',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // background: 'rgb(213 213 213)',
     background: 'rgba(213, 213, 213, 0.6)',
     borderBottom: 'solid .03em'
   },
   h1: {
     fontSize: '.95em',
     lineHeight: '120%',
-    marginLeft: '.5em'
+    margin: '.1em 0 0 .7em'
   },
   ellipsis: {
-    display: '',
-    margin: '0 .4em 0 0'
+    // color: 'rgb(065 065 065)',
+    margin: '0 1em 0 0'
 
   }
 } 

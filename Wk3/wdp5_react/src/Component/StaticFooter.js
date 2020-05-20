@@ -19,14 +19,16 @@ const Name = props => {
 export default Name
 
 const styles = {
-footerDiv: {
+  footerDiv: {
+    color: 'rgb(065 065 065)',
     display: 'flex',
     padding: '.3em 0',
     background: 'rgba(213, 213, 213, 0.6)',
     borderTop: 'solid .03em'
   },
   h3: {
-    fontSize: '.7em',
-    marginLeft: '.4em'
+    fontSize: '.6em',
+    lineHeight: '120%',
+    margin: '.3em 0 0 1em'
   }
 } 
