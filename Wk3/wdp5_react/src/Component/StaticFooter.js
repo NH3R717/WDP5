@@ -29,6 +29,6 @@ const styles = {
   h3: {
     fontSize: '.6em',
     lineHeight: '120%',
-    margin: '.3em 0 0 1em'
+    margin: '.25em 0 0 1em'
   }
 } 
