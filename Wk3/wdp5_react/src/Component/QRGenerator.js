@@ -13,49 +13,50 @@ class GeneratorComp extends Component {
     }
 
 
+    
     render() {
 
         let showQRCode =
-        (function showQRCode() {
-  
-        //   const codeUrl = "http://api.qrserver.com/v1/create-qr-code/?data=%2BQR+%20Code+%20Test%2B&size=100x100"
-          const codeUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
-  
-          let generateHTML = ''
-  
-          fetch(codeUrl, {
-            method: 'GET',
-            // headers: {
-            //     'Content-Type': 'img'
-            // },
-            mode: 'cors',
-          })
-            .then(response => {
-              generateHTML(response);
-            })
-            .catch(error => console.log(`Error message ${error}`));
-  
-          generateHTML = (data) => {
-            const html = `<img src=${data.url}height="175" width="175">`
-            console.log(data.url);
-            console.log(html);
-            console.log(codeUrl);
-            const qrElement = document.querySelector('#QRimage');
-            console.log(qrElement);
-            qrElement.innerHTML = html;
-          }
-  
-        //   let oneClickOnly = document.getElementById("QRCode");
-        //   oneClickOnly.removeEventListener("click", showQRCode);
-  
-        })
-  
-      window.addEventListener('load', function () {
-  
-        document.getElementById("sendButton").addEventListener("click", showQRCode);
-  
-      });
-        
+            (function showQRCode() {
+
+                const codeUrl = "http://api.qrserver.com/v1/create-qr-code/?data=%2BQR+%20Code+%20Test%2B&size=100x100"
+                //   const codeUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+
+                let generateHTML = ''
+
+                fetch(codeUrl, {
+                    method: 'GET',
+                    // headers: {
+                    //     'Content-Type': 'img'
+                    // },
+                    mode: 'cors',
+                })
+                    .then(response => {
+                        generateHTML(response);
+                    })
+                    .catch(error => console.log(`Error message ${error}`));
+
+                generateHTML = (data) => {
+                    const html = `<img src=${data.url}height="175" width="175">`
+                    console.log(data.url);
+                    console.log(html);
+                    console.log(codeUrl);
+                    const qrElement = document.querySelector('#QRimage');
+                    console.log(qrElement);
+                    qrElement.innerHTML = html;
+                }
+
+                // let oneClickOnly = document.getElementById("sendButton");
+                // oneClickOnly.removeEventListener("click", showQRCode);
+
+            })()
+
+        window.addEventListener('load', function () {
+
+            document.getElementById("sendButton").addEventListener("click", showQRCode);
+
+        });
+
         return (
             <main>
 
@@ -64,7 +65,7 @@ class GeneratorComp extends Component {
                     <section style={styles.qrCodeImageButtons}>
                         {/* QR Code Image */}
                         <article style={styles.imageContainer} >
-                            <img id='QRimage' src={QRPlaceholder} height="175" width="175" alt="QR Code" style={styles.QRCode} />
+                            <div id='QRimage' src={QRPlaceholder} height="175" width="175" alt="QR Code" style={styles.QRCode} />
                         </article>
                         {/* QR Code Buttons */}
                         <article style={styles.qrCodeButtons}>
@@ -73,6 +74,7 @@ class GeneratorComp extends Component {
                             {/* <img src={Download} alt="Info" style={styles.download} /> */}
                         </article>
                     </section>
+
                     {/* QR Code name and text input fields */}
                     <section style={styles.nameTextFields}>
                         {/* QR Code Name Input */}
@@ -269,9 +271,10 @@ class GeneratorComp extends Component {
                             </div>
                         </article>
                     </section>
+
                 </form>
 
-            </main>
+            </main >
 
         )
     }
@@ -292,6 +295,7 @@ const styles = {
         borderRadius: '1em'
     },
     QRCode: {
+        borderRadius: '2em'
     },
     // Send Save Buttons
     qrCodeImageButtons: {
