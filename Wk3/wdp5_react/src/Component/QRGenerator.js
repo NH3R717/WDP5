@@ -19,7 +19,15 @@ class GeneratorComp extends Component {
         let showQRCode =
             (function showQRCode() {
 
-                const codeUrl = "http://api.qrserver.com/v1/create-qr-code/?data=%2BQR+%20Code+%20Test%2B&size=100x100"
+                // const QRAPI = {
+                //     url: 'http://api.qrserver.com/v1/create-qr-code/?',
+                //     type: 'pokemon'
+                // };
+            
+                // const { url, type } = pokeAPI;
+                // const pokeGetApi = `${url}/${type}/`;
+
+                const codeUrl = "https://api.qrserver.com/v1/create-qr-code/?data=Cheesy%20Code&size=500x500&ecc=H&color=E5312C&bgcolor=0000ff&margin=20&format=png"
                 //   const codeUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
 
                 let generateHTML = ''
