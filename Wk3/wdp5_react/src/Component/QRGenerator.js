@@ -13,7 +13,7 @@ class GeneratorComp extends Component {
     }
 
 
-    
+
     render() {
 
         let showQRCode =
@@ -23,7 +23,7 @@ class GeneratorComp extends Component {
                 //     url: 'http://api.qrserver.com/v1/create-qr-code/?',
                 //     type: 'pokemon'
                 // };
-            
+
                 // const { url, type } = pokeAPI;
                 // const pokeGetApi = `${url}/${type}/`;
 
@@ -225,8 +225,10 @@ class GeneratorComp extends Component {
                                 </div>
                             </div>
                         </article>
+                        
                         {/* QR Code Image Error Correction & Border */}
                         <article style={styles.imageCorrectionBorder}>
+
                             {/* QR Code Image Error Correction */}
                             <div style={styles.imageCorrection}>
                                 <h1 style={styles.H2}>Error Correct</h1>
@@ -248,6 +250,7 @@ class GeneratorComp extends Component {
                                     <label style={styles.label}>high</label>
                                 </div>
                             </div>
+
                             {/* QR Code Image Border */}
                             <div style={styles.imageBorder}>
                                 <h1 style={styles.H2}>Code Border</h1>
@@ -264,7 +267,7 @@ class GeneratorComp extends Component {
                                         style={styles.radioInput}
                                         checked='checked'
                                         name="codeBorder"
-                                        value='1'
+                                        value='8'
                                     />
                                     <label style={styles.label}>thin</label>
                                 </div>
@@ -272,7 +275,7 @@ class GeneratorComp extends Component {
                                     <input type='radio'
                                         style={styles.radioInput}
                                         name="codeBorder"
-                                        value='2'
+                                        value='20'
                                     />
                                     <label style={styles.label}>thick</label>
                                 </div>
