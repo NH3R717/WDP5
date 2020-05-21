@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import QRPlaceholder from '../images/QRPlaceholder.svg'
 
 
+
 class GeneratorComp extends Component {
     //create state object that will take code input values for concatenation to a url that will be sent to the QR Code API via GET fetch()
     state = {
@@ -14,6 +15,47 @@ class GeneratorComp extends Component {
 
     render() {
 
+        let showQRCode =
+        (function showQRCode() {
+  
+        //   const codeUrl = "http://api.qrserver.com/v1/create-qr-code/?data=%2BQR+%20Code+%20Test%2B&size=100x100"
+          const codeUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+  
+          let generateHTML = ''
+  
+          fetch(codeUrl, {
+            method: 'GET',
+            // headers: {
+            //     'Content-Type': 'img'
+            // },
+            mode: 'cors',
+          })
+            .then(response => {
+              generateHTML(response);
+            })
+            .catch(error => console.log(`Error message ${error}`));
+  
+          generateHTML = (data) => {
+            const html = `<img src=${data.url}height="175" width="175">`
+            console.log(data.url);
+            console.log(html);
+            console.log(codeUrl);
+            const qrElement = document.querySelector('#QRimage');
+            console.log(qrElement);
+            qrElement.innerHTML = html;
+          }
+  
+        //   let oneClickOnly = document.getElementById("QRCode");
+        //   oneClickOnly.removeEventListener("click", showQRCode);
+  
+        })
+  
+      window.addEventListener('load', function () {
+  
+        document.getElementById("sendButton").addEventListener("click", showQRCode);
+  
+      });
+        
         return (
             <main>
 
@@ -22,12 +64,12 @@ class GeneratorComp extends Component {
                     <section style={styles.qrCodeImageButtons}>
                         {/* QR Code Image */}
                         <article style={styles.imageContainer} >
-                            <img src={QRPlaceholder} height="175" width="175" alt="QR Code" style={styles.QRCode} />
+                            <img id='QRimage' src={QRPlaceholder} height="175" width="175" alt="QR Code" style={styles.QRCode} />
                         </article>
                         {/* QR Code Buttons */}
                         <article style={styles.qrCodeButtons}>
-                            <button style={styles.buttonSend}>Send</button>
-                            <button style={styles.buttonSave}>Save</button>
+                            <button id='sendButton' style={styles.buttonSend}>Send</button>
+                            <button id='savedButton' style={styles.buttonSave}>Save</button>
                             {/* <img src={Download} alt="Info" style={styles.download} /> */}
                         </article>
                     </section>
@@ -87,7 +129,7 @@ class GeneratorComp extends Component {
                                 <h2 style={styles.H2}>File Format</h2>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
-                                    style={styles.radioInput}
+                                        style={styles.radioInput}
                                         checked='checked'
                                         name="fileFormat"
                                         value='svg'
@@ -119,24 +161,25 @@ class GeneratorComp extends Component {
                                 <h1 style={styles.H2}>FG Color</h1>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
-                                        name="format"
                                         style={styles.radioInput}
-                                        value='EDEDED' 
+                                        checked='checked'
+                                        name="FGColor"
+                                        value='EDEDED'
                                     />
                                     <label style={styles.label}>Lt Grey</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
-                                        name="format"
                                         style={styles.radioInput}
+                                        name="FGColor"
                                         value='E9F5FF'
                                     />
                                     <label style={styles.label}>Lt Blue</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
-                                        name="format"
                                         style={styles.radioInput}
+                                        name="FGColor"
                                         value='FFB7B5'
                                     />
                                     <label style={styles.label}>Lt Red</label>
@@ -147,24 +190,25 @@ class GeneratorComp extends Component {
                                 <h1 style={styles.H2}>BG Color</h1>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
-                                        name="format"
                                         style={styles.radioInput}
+                                        checked='checked'
+                                        name="BGColor"
                                         value='414141'
                                     />
                                     <label style={styles.label}>Dk Grey</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
-                                        name="format"
                                         style={styles.radioInput}
+                                        name="BGColor"
                                         value='E5312C'
                                     />
                                     <label style={styles.label}>Dk Blue</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
-                                        name="format"
                                         style={styles.radioInput}
+                                        name="BGColor"
                                         value='3F2CE5'
                                     />
                                     <label style={styles.label}>Dk Red</label>
@@ -178,17 +222,18 @@ class GeneratorComp extends Component {
                                 <h1 style={styles.H2}>Error Correct</h1>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
-                                        name="format"
                                         style={styles.radioInput}
-                                        value='svg'
+                                        checked='checked'
+                                        name="errorCorrect"
+                                        value='L'
                                     />
                                     <label style={styles.label}>low</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
-                                        name="format"
                                         style={styles.radioInput}
-                                        value='png'
+                                        name="errorCorrect"
+                                        value='H'
                                     />
                                     <label style={styles.label}>high</label>
                                 </div>
@@ -198,26 +243,26 @@ class GeneratorComp extends Component {
                                 <h1 style={styles.H2}>Code Border</h1>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
-                                        name="format"
                                         style={styles.radioInput}
-                                        value='svg'
+                                        name="codeBorder"
+                                        value='0'
                                     />
                                     <label style={styles.label}>none</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
-                                        name="format"
                                         style={styles.radioInput}
-                                        value='png'
+                                        checked='checked'
+                                        name="codeBorder"
+                                        value='1'
                                     />
                                     <label style={styles.label}>thin</label>
                                 </div>
                                 <div style={styles.inputLabel}>
                                     <input type='radio'
-                                        name="format"
                                         style={styles.radioInput}
-                                        value='jpg'
-
+                                        name="codeBorder"
+                                        value='2'
                                     />
                                     <label style={styles.label}>thick</label>
                                 </div>
@@ -250,12 +295,7 @@ const styles = {
     },
     // Send Save Buttons
     qrCodeImageButtons: {
-        // background: 'rgb(195 231 246)'
     },
-    //     qrCodeButtons: {
-    //         margin: 'auto;
-    //   width: 50%;
-    //     },
     buttonSend: {
         display: 'inline',
         margin: '0 .25em',
@@ -285,11 +325,6 @@ const styles = {
     codeName: {
         margin: '0 0 1em .21em'
     },
-    // input: {
-    //     marginBottom: '.2em',
-    //     width: '100%',
-    //     borderRadius: '.3em'
-    // },
     // QR Code Text
     codeText: {
     },
@@ -308,10 +343,10 @@ const styles = {
     // Radio Buttons
     H2: {
     },
-    radios: {
-        margin: '1em auto',
-        color: 'rgb(065 065 065)'
-    },
+    // radios: {
+    //     margin: '1em auto',
+    //     color: 'rgb(065 065 065)'
+    // },
     radioGroupDiv: {
         display: 'block',
         margin: '.6em auto'
