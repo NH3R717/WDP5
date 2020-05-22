@@ -9,14 +9,14 @@
 import React from 'react'
 
 // Functional Component
-const Name = props => {
+const Footer = props => {
   return (
     <div style={styles.footerDiv}>
       <h3 style={styles.h3}>© 2020 Supers Cafe</h3>
     </div>
   )
 }
-export default Name
+export default Footer
 
 const styles = {
   footerDiv: {

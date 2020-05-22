@@ -12,23 +12,12 @@ class GeneratorComp extends Component {
 
     }
 
-
-
     render() {
 
         let showQRCode =
             (function showQRCode() {
 
-                // const QRAPI = {
-                //     url: 'http://api.qrserver.com/v1/create-qr-code/?',
-                //     type: 'pokemon'
-                // };
-
-                // const { url, type } = pokeAPI;
-                // const pokeGetApi = `${url}/${type}/`;
-
                 const codeUrl = "https://api.qrserver.com/v1/create-qr-code/?data=Cheesy%20Code&size=500x500&ecc=H&color=E5312C&bgcolor=0000ff&margin=20&format=png"
-                //   const codeUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
 
                 let generateHTML = ''
 
@@ -54,9 +43,6 @@ class GeneratorComp extends Component {
                     qrElement.innerHTML = html;
                 }
 
-                // let oneClickOnly = document.getElementById("sendButton");
-                // oneClickOnly.removeEventListener("click", showQRCode);
-
             })()
 
         window.addEventListener('load', function () {
@@ -67,14 +53,17 @@ class GeneratorComp extends Component {
 
         return (
             <main>
-
+                {/* Appliction Form */}
                 <form style={styles.inputForm}>
+
                     {/* QR Code Image and Send/Save Buttons */}
                     <section style={styles.qrCodeImageButtons}>
+
                         {/* QR Code Image */}
                         <article style={styles.imageContainer} >
                             <div id='QRimage' src={QRPlaceholder} height="175" width="175" alt="QR Code" style={styles.QRCode} />
                         </article>
+
                         {/* QR Code Buttons */}
                         <article style={styles.qrCodeButtons}>
                             <button id='sendButton' style={styles.buttonSend}>Send</button>
@@ -85,6 +74,7 @@ class GeneratorComp extends Component {
 
                     {/* QR Code name and text input fields */}
                     <section style={styles.nameTextFields}>
+
                         {/* QR Code Name Input */}
                         <article style={styles.codeName}>
                             <input type='text'
@@ -92,6 +82,7 @@ class GeneratorComp extends Component {
                                 name="QRCodeName"
                                 placeholder=" Code Name" />
                         </article>
+
                         {/* QR Code Text Input */}
                         <article style={styles.codeText}>
                             <textarea
@@ -101,131 +92,150 @@ class GeneratorComp extends Component {
                                 placeholder=" Code Text" />
                         </article>
                     </section>
+
                     {/* QR Code Radio Buttons */}
                     <section style={styles.radios}>
+
                         {/* QR Code Image Size And File Type */}
                         <article style={styles.imageSizeType}>
+
                             {/* QR Code Image Size */}
                             <div style={styles.radioGroupDiv}>
                                 <h1 style={styles.H2}>Code Size</h1>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         name="imageSize"
-                                        value='150'
+                                        value='&size=150x150'
                                     />
                                     <label style={styles.label}>Small</label>
                                 </div>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         checked='checked'
                                         style={styles.radioInput}
                                         name="imageSize"
-                                        value='350'
+                                        value='&size=350x350'
                                     />
                                     <label style={styles.label}>Medium</label>
                                 </div>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         name="imageSize"
-                                        value='750'
+                                        value='&size750x750'
                                     />
                                     <label style={styles.label}>Large</label>
                                 </div >
                             </div >
+
                             {/* QR Code Image File Format */}
                             <div id="format" style={styles.radioGroupDiv}>
                                 <h2 style={styles.H2}>File Format</h2>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         checked='checked'
                                         name="fileFormat"
-                                        value='svg'
+                                        value='&format=svg'
                                     />
                                     <label style={styles.label}>svg</label>
                                 </div>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         name="fileFormat"
-                                        value='png'
+                                        value='&format=png'
                                     />
                                     <label style={styles.label}>png</label>
                                 </div>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         name="fileFormat"
-                                        value='jpg'
+                                        value='&format=jpg'
                                     />
                                     <label style={styles.label}>jpg</label>
                                 </div>
                             </div>
                         </article>
+
                         {/* QR Code Image Colors*/}
                         <article style={styles.imageColors}>
+
                             {/* QR Code Image Foreground Color */}
                             <div style={styles.imageForegroundColor}>
                                 <h1 style={styles.H2}>FG Color</h1>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         checked='checked'
                                         name="FGColor"
-                                        value='EDEDED'
+                                        value='&color=EDEDED'
                                     />
                                     <label style={styles.label}>Lt Grey</label>
                                 </div>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         name="FGColor"
-                                        value='E9F5FF'
+                                        value='&color=E9F5FF'
                                     />
                                     <label style={styles.label}>Lt Blue</label>
                                 </div>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         name="FGColor"
-                                        value='FFB7B5'
+                                        value='&color=FFB7B5'
                                     />
                                     <label style={styles.label}>Lt Red</label>
                                 </div>
                             </div>
+
                             {/* QR Code Image Background Color */}
                             <div style={styles.imageBackgroundColor}>
                                 <h1 style={styles.H2}>BG Color</h1>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         checked='checked'
                                         name="BGColor"
-                                        value='414141'
+                                        value='&bgcolor=414141'
                                     />
                                     <label style={styles.label}>Dk Grey</label>
                                 </div>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         name="BGColor"
-                                        value='E5312C'
+                                        value='&bgcolor=E5312C'
                                     />
                                     <label style={styles.label}>Dk Blue</label>
                                 </div>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         name="BGColor"
-                                        value='3F2CE5'
+                                        value='&bgcolor=3F2CE5'
                                     />
                                     <label style={styles.label}>Dk Red</label>
                                 </div>
                             </div>
                         </article>
-                        
+
                         {/* QR Code Image Error Correction & Border */}
                         <article style={styles.imageCorrectionBorder}>
 
@@ -233,19 +243,21 @@ class GeneratorComp extends Component {
                             <div style={styles.imageCorrection}>
                                 <h1 style={styles.H2}>Error Correct</h1>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         checked='checked'
                                         name="errorCorrect"
-                                        value='L'
+                                        value='&ecc=L'
                                     />
                                     <label style={styles.label}>low</label>
                                 </div>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         name="errorCorrect"
-                                        value='H'
+                                        value='&ecc=H'
                                     />
                                     <label style={styles.label}>high</label>
                                 </div>
@@ -255,32 +267,36 @@ class GeneratorComp extends Component {
                             <div style={styles.imageBorder}>
                                 <h1 style={styles.H2}>Code Border</h1>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         name="codeBorder"
-                                        value='0'
+                                        value='&margin=0'
                                     />
                                     <label style={styles.label}>none</label>
                                 </div>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         checked='checked'
                                         name="codeBorder"
-                                        value='8'
+                                        value='&margin=8'
                                     />
                                     <label style={styles.label}>thin</label>
                                 </div>
                                 <div style={styles.inputLabel}>
-                                    <input type='radio'
+                                    <input
+                                        type='radio'
                                         style={styles.radioInput}
                                         name="codeBorder"
-                                        value='20'
+                                        value='&margin=20'
                                     />
                                     <label style={styles.label}>thick</label>
                                 </div>
                             </div>
                         </article>
+
                     </section>
 
                 </form>

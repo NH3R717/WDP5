@@ -10,7 +10,7 @@ import React from 'react'
 import Ellipsis from '../images/ellipsis-v.svg'
 
 // Functional Component
-const Name = props => {
+const Header = props => {
   return (
     <div style={styles.headerDiv}>
       <h1 style={styles.h1}>QR Code Generator</h1>
@@ -18,7 +18,7 @@ const Name = props => {
     </div>
   )
 }
-export default Name
+export default Header
 
 const styles = {
   headerDiv: {
