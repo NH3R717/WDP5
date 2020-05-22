@@ -9,7 +9,6 @@
 import React from 'react'
 import Ellipsis from '../images/ellipsis-v.svg'
 
-// Functional Component
 const Header = props => {
   return (
     <div style={styles.headerDiv}>

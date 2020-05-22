@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import './App.css';
 import Header from './Component/StaticHeader.js'
 // import QRGenerator from './Component/QRGenerator.js'
-import Hold from './Component/Hold.js'
+import Test from './Component/Test.js'
 import Footer from './Component/StaticFooter.js'
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
 
             <main>
                 <Header />
-                <Hold />
+                <Test />
                 <Footer />
             </main>
 
