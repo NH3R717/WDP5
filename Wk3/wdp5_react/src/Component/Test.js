@@ -17,10 +17,9 @@ class Test extends Component {
         console.log(this.state)
     }
 
-    getCode = (junk) => {
+    getCode = () => {
 
         let codeURL = `${this.state.url}${this.state.QRCodeText}${this.state.imageSize}${this.state.FGColor}`
-        // document.querySelector('#QRimage') = 
 
         // const codeUrl = "http://api.qrserver.com/v1/create-qr-code/?data=%2BQR+%20Code+%20Test%2B&size=100x100"
 
@@ -31,7 +30,8 @@ class Test extends Component {
             // },
             mode: 'cors',
         })
-            .then(document.querySelector.innerHTML = codeURL)
+            .then(document.querySelector("#QRimage").innerHTML = codeURL)
+            .then(console.log(codeURL))
             .catch(error => console.log('There was an error', error))
         console.log(codeURL);
     }
@@ -46,7 +46,7 @@ class Test extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} >
+            <form onSubmit={this.getCode} >
 
                 <h1>Text {this.state.QRCodeText}</h1>
                 <h1>Size {this.state.imageSize}</h1>
@@ -64,7 +64,7 @@ class Test extends Component {
                     <article style={styles.qrCodeButtons}>
                         <button id='sendButton'
                             style={styles.buttonSend}
-                            onMouseOver={this.url}
+                            onClick={this.getCode}
                         >Send</button>
                         {/* <button id='savedButton' style={styles.buttonSave}>Save</button> */}
                         <input
@@ -105,29 +105,7 @@ class Test extends Component {
                 <label style={styles.label}>Lt Grey</label>
 
             </form>
-
-            // //     // this.handleSend = this.generateURL.bind(this);
-
-            // //     // changeHandler = (event) => {
-            // //     //     this.setState({username: event.target.value});
-            // //     //   }
-
-
-            // // generateURL(event) {
-            // //     event.preventDefault()
-            // //     // console.log
-            // //     this.setState({ text: event.currentTarget.value })
-            // //     this.setState({ size: event.currentTarget.value })
-            // //     console.log(event.currentTarget.value)
-            // // }
-
-            // // handleSubmit() {
-
-            // // }
-
-            // // handleChange(event) {
-            // //     this.setState({ value: event.target.text });
-            // // }
+            
         )
     }
 }
