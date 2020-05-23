@@ -10,7 +10,7 @@ class Routes extends Component {
         return (
             <section>
                 <Switch>
-                    <Route exact path='/' component={QRGenerator} />
+                    <Route exact path='/' component={Test} />
                     <Route exact path='/QRGenerator' component={QRGenerator} />
                     <Route exact path='/About' component={About} />
                     <Route exact path='/Test' component={Test} />
