@@ -17,23 +17,31 @@ class Test extends Component {
         console.log(this.state)
     }
 
-    url = (event) => {
-        
-        let APIurl = `${this.state.url}${this.state.QRCodeText}${this.state.imageSize}${this.state.FGColor}`
+    getCode = (junk) => {
+
+        let codeURL = `${this.state.url}${this.state.QRCodeText}${this.state.imageSize}${this.state.FGColor}`
         // document.querySelector('#QRimage') = 
 
-        console.log(APIurl);
+        // const codeUrl = "http://api.qrserver.com/v1/create-qr-code/?data=%2BQR+%20Code+%20Test%2B&size=100x100"
+
+        fetch(codeURL, {
+            method: 'GET',
+            // headers: {
+            //     'Content-Type': 'img'
+            // },
+            mode: 'cors',
+        })
+            .then(document.querySelector.innerHTML = codeURL)
+            .catch(error => console.log('There was an error', error))
+        console.log(codeURL);
     }
 
-   
-    
     changeHandler = (event) => {
         let nam = event.target.name;
         let val = event.target.value;
         this.setState({ [nam]: val });
         // this.setState({text: event.target.value});
         console.log(this.state)
-
     }
 
     render() {
@@ -60,8 +68,8 @@ class Test extends Component {
                         >Send</button>
                         {/* <button id='savedButton' style={styles.buttonSave}>Save</button> */}
                         <input
-        type='submit'
-      />
+                            type='submit'
+                        />
                         {/* <img src={Download} alt="Info" style={styles.download} /> */}
                     </article>
                 </section>
