@@ -8,22 +8,22 @@ class Test extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            url: 'https://api.qrserver.com/v1/create-qr-code/?/data=',
-            text: '',
-            size: '',
-            color: '',
-            // bgcolor: '',
-            // margin: '',
-            // format: ''
+            url: 'https://api.qrserver.com/v1/create-qr-code/?data=',
+            QRCodeText: '',
+            imageSize: '',
+            FGColor: '',
         };
         this.changeHandler = this.changeHandler.bind(this);
         console.log(this.state)
     }
 
-    mySubmitHandler = (event) => {
-        event.preventDefault();
-        alert("Message " + this.state.text);
-      }
+    url = (event) => {
+        
+        let APIurl = `${this.state.url}${this.state.QRCodeText}${this.state.imageSize}${this.state.FGColor}`
+        // document.querySelector('#QRimage') = 
+
+        console.log(APIurl);
+    }
 
    
     
@@ -33,6 +33,7 @@ class Test extends Component {
         this.setState({ [nam]: val });
         // this.setState({text: event.target.value});
         console.log(this.state)
+
     }
 
     render() {
@@ -53,7 +54,10 @@ class Test extends Component {
 
                     {/* QR Code Buttons */}
                     <article style={styles.qrCodeButtons}>
-                        <button id='sendButton' style={styles.buttonSend}>Send</button>
+                        <button id='sendButton'
+                            style={styles.buttonSend}
+                            onMouseOver={this.url}
+                        >Send</button>
                         {/* <button id='savedButton' style={styles.buttonSave}>Save</button> */}
                         <input
         type='submit'
