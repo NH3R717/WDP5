@@ -7,13 +7,13 @@
    */
 
 import React from 'react'
-import Ellipsis from '../images/ellipsis-v.svg'
+import About from '../images/info.svg'
 
 const Header = props => {
   return (
     <div style={styles.headerDiv}>
       <h1 style={styles.h1}>QR Code Generator</h1>
-      <img src={Ellipsis} alt="Info" style={styles.ellipsis} />
+      <img src={About} alt="Info" style={styles.ellipsis} />
     </div>
   )
 }
