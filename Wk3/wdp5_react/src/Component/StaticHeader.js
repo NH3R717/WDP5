@@ -7,13 +7,18 @@
    */
 
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import About from '../images/info.svg'
 
 const Header = props => {
   return (
     <div style={styles.headerDiv}>
-      <h1 style={styles.h1}>QR Code Generator</h1>
-      <img src={About} alt="Info" style={styles.ellipsis} />
+      <NavLink to="/">
+        <h1 style={styles.h1}>QR Code Generator</h1>
+        </NavLink>
+      <NavLink to="/about">
+      <img src={About} alt="Info" style={styles.ellipsis} width="30" height="30" fill="FFFFF" />
+      </NavLink>
     </div>
   )
 }
@@ -35,8 +40,11 @@ const styles = {
     margin: '.1em 0 0 .7em'
   },
   ellipsis: {
-    // color: 'rgb(065 065 065)',
-    margin: '0 1em 0 0'
 
+    // color: 'rgb(065 065 065)',
+    padding: '.15em .5em 0 0',
+    border: 'none',
+    color: 'rgba(21, 30, 63, 1)',
+    background: 'none'
   }
 } 

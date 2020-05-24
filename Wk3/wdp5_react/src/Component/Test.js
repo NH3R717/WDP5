@@ -16,6 +16,7 @@ class Test extends Component {
         this.changeHandler = this.changeHandler.bind(this);
         console.log(this.state)
     }
+    componentDidMount() { }
 
     getCode = () => {
 
