@@ -1,49 +1,74 @@
 /* @media only screen and (max-width: 600px) {
     #MQHeading {
-      color:red;
+      display:red;
     }
   } */
 
+/*
+Todo
+
+center web div */
+
 @media only screen and (min-width: 1280px) {
+    .mQWebAll {
+        display: block;
+        margin-left: 15em;
+        
+        color: green;
+        height: auto;
+        position: relative;
+        /* border: 3px solid green;  */
+    }
     /* left page – image & buttons */
     .mQWebLeft {
-        color: none;
+        /* margin-top: -10em; */
+        /* display: inline-block; */
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        /* left: 20%; */
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     }
     /* right page */
     .mQWebRight {
-        color: none;
+        display: inline-block;
+        margin-right: 3em;
+        /* display: none; */
     }
     .mQWebRightText {
-        color: none;
+        display: none;
     }
-    .mQWebRightRadioUp {
-        color: none;
-    }
-    .mQWebRightRadioDown {
-        color: none;
-    }
+    .mQWebRightRadio1 {
+        display: inline-block;    }
+    .mQWebRightRadio2 {
+        display: inline-block;    }
 }
 
 @media only screen and (max-width: 1279px) {
+    .mQTabletAll {
+        color: blue;
+        display: block;
+    }
     /* left page */
     .mQTabletLeft {
-        color: none;
+        display: none;
     }
     .mQTabletLeftImageButton {
-        color: none;
+        display: none;
     }
     .mQTabletLeftRadios {
-        color: none;
+        display: none;
     }
     /* right page */
     .mQTabletRight {
-        color: none;
+        display: none;
     }
     .mQTabletRightText {
-        color: none;
+        display: none;
     }
     .mQTabletRightRadios {
-        color: none;
+        display: none;
     }
 }
 
