@@ -1,6 +1,10 @@
 //https://api.qrserver.com/v1/create-qr-code/?data=Cheesy%20Code&size=500x500&ecc=H&color=E5312C&bgcolor=0000ff&margin=20&format=svg
 
 import React, { Component } from 'react'
+import '../mediaQueries.css'
+// import MediaQuery from 'react-responsive';
+
+// assets
 import QRPlaceholder from '../images/QRPlaceholder.svg'
 
 class Test extends Component {
@@ -48,11 +52,13 @@ class Test extends Component {
     render() {
         return (
             <form onSubmit={this.getCode} >
-
+                {/* <MediaQuery minDeviceWidth={700}> */}
+                <div id='MQHeading' style={styles.headings}>
                 <h1>Text {this.state.QRCodeText}</h1>
                 <h1>Size {this.state.imageSize}</h1>
                 <h1>Color {this.state.FGColor}</h1>
-
+                </div>
+                {/* </MediaQuery> */}
                 {/* QR Code Image and Send/Save Buttons */}
                 <section style={styles.qrCodeImageButtons}>
 
@@ -112,6 +118,18 @@ class Test extends Component {
 }
 
 const styles = {
+
+    // headings: {
+    //     color: 'lightgreen'
+    // },
+    imageContainer: {
+        margin: '1em auto 1em auto',
+        paddingTop: '.38em',
+        height: '195px',
+        width: '195px',
+        background: 'rgb(213, 213, 213)',
+        borderRadius: '1em'
+    },
     codeName: {
         // QR Code Image
     },

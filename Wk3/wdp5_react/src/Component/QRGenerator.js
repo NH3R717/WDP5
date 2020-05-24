@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 //image files
 // import Download from '../images/download.svg'
 import QRPlaceholder from '../images/QRPlaceholder.svg'
+import '../mediaQueries.css'
+
 
 
 

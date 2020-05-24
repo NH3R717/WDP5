@@ -8,7 +8,6 @@
 
 import React from 'react'
 
-// Functional Component
 const Footer = props => {
   return (
     <div style={styles.footerDiv}>
