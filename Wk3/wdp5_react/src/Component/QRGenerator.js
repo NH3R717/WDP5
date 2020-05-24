@@ -94,9 +94,9 @@ class GeneratorComp extends Component {
         return (
             <main>
                 {/* <main className='mQWebAll mQTabletAll mQPhoneAll'> */}
-               
-                    {/* Appliction Form */}
-                    <form style={styles.inputForm}>
+
+                {/* Appliction Form */}
+                <form style={styles.inputForm}>
                     <div className='mQWebAll mQTabletAll mQPhoneAll'>
                         {/* QR Code Image and Send/Save Buttons */}
                         <section className='mQWebLeft ' id='mQImageButton' style={styles.qrCodeImageButtons}>
@@ -127,7 +127,7 @@ class GeneratorComp extends Component {
                                         placeholder=" Code Name"
                                         onChange={this.changeHandler}
                                     />
-                                    
+
                                 </article>
 
                                 {/* QR Code Text Input */}
@@ -361,9 +361,9 @@ class GeneratorComp extends Component {
                                 </article>{/* Radio Group (3) 2 of 2 */}
                             </section>
                         </div>
-                        </div>
-                    </form>
-                
+                    </div>
+                </form>
+
             </main >
 
         )

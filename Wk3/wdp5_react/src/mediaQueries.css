@@ -11,8 +11,9 @@ center web div */
 
 @media only screen and (min-width: 1280px) {
     .mQWebAll {
-        display: block;
-        margin-left: 15em;
+        display: inline-block;
+        /* justify-content: center; */
+        /* margin-left: 15em; */
         
         color: green;
         height: auto;
@@ -22,22 +23,22 @@ center web div */
     /* left page – image & buttons */
     .mQWebLeft {
         /* margin-top: -10em; */
-        /* display: inline-block; */
-        margin: 0;
-        position: absolute;
+        display: inline-block;
+        margin: 0 2em 0 0;
+        /* position: absolute; */
         top: 50%;
         /* left: 20%; */
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        /* -ms-transform: translate(-50%, -50%); */
+        transform: translate(-0%, -50%);
     }
     /* right page */
     .mQWebRight {
         display: inline-block;
-        margin-right: 3em;
+        /* margin-right: 3em; */
         /* display: none; */
     }
     .mQWebRightText {
-        display: none;
+        /* display: none; */
     }
     .mQWebRightRadio1 {
         display: inline-block;    }
