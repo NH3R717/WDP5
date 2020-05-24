@@ -16,60 +16,62 @@ class GeneratorComp extends Component {
 
     render() {
 
-        let showQRCode =
-            (function showQRCode() {
+        // let showQRCode =
+        //     (function showQRCode() {
 
-                const codeUrl = "https://api.qrserver.com/v1/create-qr-code/?data=Cheesy%20Code&size=500x500&ecc=H&color=E5312C&bgcolor=0000ff&margin=20&format=png"
+        //         const codeUrl = "https://api.qrserver.com/v1/create-qr-code/?data=Cheesy%20Code&size=500x500&ecc=H&color=E5312C&bgcolor=0000ff&margin=20&format=png"
 
-                let generateHTML = ''
+        //         let generateHTML = ''
 
-                fetch(codeUrl, {
-                    method: 'GET',
-                    // headers: {
-                    //     'Content-Type': 'img'
-                    // },
-                    mode: 'cors',
-                })
-                    .then(response => {
-                        generateHTML(response);
-                    })
-                    .catch(error => console.log(`Error message ${error}`));
+        //         fetch(codeUrl, {
+        //             method: 'GET',
+        //             // headers: {
+        //             //     'Content-Type': 'img'
+        //             // },
+        //             mode: 'cors',
+        //         })
+        //             .then(response => {
+        //                 generateHTML(response);
+        //             })
+        //             .catch(error => console.log(`Error message ${error}`));
 
-                generateHTML = (data) => {
-                    const html = `<img src=${data.url}height="175" width="175">`
-                    console.log(data.url);
-                    console.log(html);
-                    console.log(codeUrl);
-                    const qrElement = document.querySelector('#QRimage');
-                    console.log(qrElement);
-                    qrElement.innerHTML = html;
-                }
+        //         generateHTML = (data) => {
+        //             const html = `<img src=${data.url}height="175" width="175">`
+        //             console.log(data.url);
+        //             console.log(html);
+        //             console.log(codeUrl);
+        //             const qrElement = document.querySelector('#QRimage');
+        //             console.log(qrElement);
+        //             qrElement.innerHTML = html;
+        //         }
 
-            })()
+        //     })()
 
-        window.addEventListener('load', function () {
+        // window.addEventListener('load', function () {
 
-            document.getElementById("sendButton").addEventListener("click", showQRCode);
+        //     document.getElementById("sendButton").addEventListener("click", showQRCode);
 
-        });
+        // });
 
         return (
             <main>
+                <div className='mQPhoneAll'>
                 {/* Appliction Form */}
                 <form style={styles.inputForm}>
 
                     {/* QR Code Image and Send/Save Buttons */}
-                    <section style={styles.qrCodeImageButtons}>
+                    <section id='mQImageButton' style={styles.qrCodeImageButtons}>
 
                         {/* QR Code Image */}
                         <article style={styles.imageContainer} >
-                            <div id='QRimage' src={QRPlaceholder} height="175" width="175" alt="QR Code" style={styles.QRCode} />
+                            <div id='QRimage' src={QRPlaceholder}
+                                height="175" width="175" alt="QR Code" style={styles.QRCode} />
                         </article>
 
                         {/* QR Code Buttons */}
                         <article style={styles.qrCodeButtons}>
-                            <button id='sendButton' style={styles.buttonSend}>Send</button>
-                            <button id='savedButton' style={styles.buttonSave}>Save</button>
+                            <button id='sendButton' style={styles.buttonSend}>Get It!</button>
+                            <button id='savedButton' style={styles.buttonSave}>Saved</button>
                             {/* <img src={Download} alt="Info" style={styles.download} /> */}
                         </article>
                     </section>
@@ -302,7 +304,7 @@ class GeneratorComp extends Component {
                     </section>
 
                 </form>
-
+                </div>
             </main >
 
         )
@@ -326,6 +328,7 @@ const styles = {
     QRCode: {
         borderRadius: '2em'
     },
+
     // Send Save Buttons
     qrCodeImageButtons: {
     },
@@ -334,30 +337,33 @@ const styles = {
         margin: '0 .25em',
         background: 'rgb(237 237 237)',
         color: 'rgb(081 081 081)',
-        width: '3.5em',
+        width: '4em',
         borderRadius: '.3em'
     },
     buttonSave: {
         margin: '0 .25em',
         background: 'rgb(237 237 237)',
         color: 'rgb(081 081 081)',
-        width: '3.5em',
+        width: '4em',
         borderRadius: '.3em'
     },
     downloadIcon: {
         paddingTop: ".2em",
         margin: '0'
     },
+
     // Text Input Fields
     nameTextFields: {
         margin: '1em auto',
         width: '80%',
         maxWidth: '13em'
     },
+
     // QR Code Name
     codeName: {
         margin: '0 0 1em .21em'
     },
+
     // QR Code Text
     codeText: {
     },
@@ -373,6 +379,7 @@ const styles = {
         resize: 'none',
         borderRadius: '.8em'
     },
+
     // Radio Buttons
     H2: {
     },
@@ -399,38 +406,47 @@ const styles = {
         textAlign: 'center',
         fontSize: '.7em'
     },
+
     // Radio Buttons
     // Image Size and Type
     imageSizeType: {
     },
+
     // Image Size
     imageSize: {
 
     },
+
     // Radio Type
     imageType: {
 
     },
+
     // Image Colors
     imageColors: {
         margin: '.6em auto'
     },
+
     // Image Foreground Color
     imageForegroundColor: {
         margin: '.6em auto'
     },
+
     // Image Background Color
     imageBackgroundColor: {
         margin: '.6em auto'
     },
+
     // Image Border Correction
     imageCorrectionBorder: {
         margin: '.6em auto'
     },
+
     // Image Border
     imageCorrection: {
         margin: '.6em auto'
     },
+
     // Image Correction
     imageBorder: {
 

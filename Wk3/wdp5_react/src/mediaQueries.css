@@ -1,5 +1,54 @@
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     #MQHeading {
       color:red;
     }
-  }
+  } */
+
+@media only screen and (min-width: 1280px) {
+    /* left page – image & buttons */
+    .mQWebLeft {
+        color: none;
+    }
+    /* right page */
+    .mQWebRight {
+        color: none;
+    }
+    .mQWebRightText {
+        color: none;
+    }
+    .mQWebRightRadioUp {
+        color: none;
+    }
+    .mQWebRightRadioDown {
+        color: none;
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    /* left page */
+    .mQTabletLeft {
+        color: none;
+    }
+    .mQTabletLeftImageButton {
+        color: none;
+    }
+    .mQTabletLeftRadios {
+        color: none;
+    }
+    /* right page */
+    .mQTabletRight {
+        color: none;
+    }
+    .mQTabletRightText {
+        color: none;
+    }
+    .mQTabletRightRadios {
+        color: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mQPhoneAll {
+        color: red;
+    }
+}
