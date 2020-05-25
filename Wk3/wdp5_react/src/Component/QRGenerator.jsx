@@ -108,7 +108,7 @@ class GeneratorComp extends Component {
                             </section>
 
                             {/* QR Code Radio Buttons (all) */}
-                            <section style={styles.radios}>
+                            <section className='radios' style={styles.radios}>
                                 {/* Radio Group (3) 1 of 2 */}
                                 <article className='mQWebRightRadio1 '>
                                     {/* QR Code Image Size */}
@@ -342,7 +342,7 @@ const styles = {
         // QR Code Image
     },
     imageContainer: {
-        margin: '1em auto 1em auto',
+        margin: '1.3em auto 1em auto',
         paddingTop: '.38em',
         height: '195px',
         width: '195px',
@@ -407,10 +407,10 @@ const styles = {
     // Radio Buttons
     H2: {
     },
-    // radios: {
-    //     margin: '1em auto',
+    radios: {
+        // margin: 'auto auto .5em auto',
     //     color: 'rgb(065 065 065)'
-    // },
+    },
     radioGroupDiv: {
         display: 'block',
         margin: '.6em auto'

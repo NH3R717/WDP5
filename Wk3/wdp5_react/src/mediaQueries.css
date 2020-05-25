@@ -9,7 +9,7 @@ Todo
 
 center web div */
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 768px) {
     .mQWebAll {
         display: inline-block;
         /* justify-content: center; */
@@ -24,7 +24,7 @@ center web div */
     .mQWebLeft {
         /* margin-top: -10em; */
         display: inline-block;
-        margin: 0 2em 0 0;
+        margin: 0 0em 0 0;
         /* position: absolute; */
         top: 50%;
         /* left: 20%; */
@@ -35,46 +35,53 @@ center web div */
     .mQWebRight {
         display: inline-block;
         /* margin-right: 3em; */
-        /* display: none; */
+        /* display: inherit; */
     }
     .mQWebRightText {
-        /* display: none; */
+        /* display: inherit; */
     }
     .mQWebRightRadio1 {
         display: inline-block;    }
     .mQWebRightRadio2 {
         display: inline-block;    }
 }
+/* .radios{
+    margin: 'auto auto auto auto',
+} */
 
-@media only screen and (max-width: 1279px) {
+/* @media only screen and (max-width: 1279px) {
     .mQTabletAll {
         color: blue;
         display: block;
     }
-    /* left page */
+    
     .mQTabletLeft {
-        display: none;
+        display: inherit;
     }
-    .mQTabletLeftImageButton {
-        display: none;
+    .mQTabletTopImageButtonNameText {
+        display: inherit;
     }
     .mQTabletLeftRadios {
-        display: none;
+        display: inherit;
     }
-    /* right page */
+   
     .mQTabletRight {
-        display: none;
+        display: inherit;
     }
     .mQTabletRightText {
-        display: none;
+        display: inherit;
     }
     .mQTabletRightRadios {
-        display: none;
+        display: inherit;
     }
-}
+} */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .mQPhoneAll {
         color: red;
+    }
+    .radios{
+        margin: auto auto .8em auto;
+       
     }
 }
