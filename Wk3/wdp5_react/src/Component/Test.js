@@ -16,29 +16,39 @@ class Test extends Component {
             QRCodeText: '',
             imageSize: '',
             FGColor: '',
+            imageURL:'',
         };
         this.changeHandler = this.changeHandler.bind(this);
-        console.log(this.state)
+        // console.log(this.state)
     }
     componentDidMount() { }
 
-    getCode = () => {
-
+    getCode = (e) => {
+e.preventDefault()
         let codeURL = `${this.state.url}${this.state.QRCodeText}${this.state.imageSize}${this.state.FGColor}`
+
+        // console.log(codeURL)
+        // return
 
         // const codeUrl = "http://api.qrserver.com/v1/create-qr-code/?data=%2BQR+%20Code+%20Test%2B&size=100x100"
 
-        fetch(codeURL, {
-            method: 'GET',
-            // headers: {
-            //     'Content-Type': 'img'
-            // },
-            mode: 'cors',
+        this.setState({ 
+
+            imageURL: codeURL
         })
-            .then(document.querySelector("#QRimage").innerHTML = codeURL)
-            .then(console.log(codeURL))
-            .catch(error => console.log('There was an error', error))
-        console.log(codeURL);
+
+        // fetch(codeURL, {
+        //     method: 'GET',
+        //     // headers: {
+        //     //     'Content-Type': 'img'
+        //     // },
+        //     mode: 'cors',
+        // })
+            
+        //     .then( ()=>{ document.querySelector("#QRimage").innerHTML = codeURL})
+        //     .then(console.log(codeURL))
+        //     .catch(error => console.log('There was an error', error))
+        // console.error("IT BROKE",codeURL)
     }
 
     changeHandler = (event) => {
@@ -46,7 +56,7 @@ class Test extends Component {
         let val = event.target.value;
         this.setState({ [nam]: val });
         // this.setState({text: event.target.value});
-        console.log(this.state)
+        // console.log(this.state)
     }
 
     render() {
@@ -64,7 +74,7 @@ class Test extends Component {
 
                     {/* QR Code Image */}
                     <article style={styles.imageContainer} >
-                        <img id='QRimage' src={QRPlaceholder} height="175" width="175" alt="QR Code" style={styles.QRCode} />
+                        <img id='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} />
                     </article>
 
                     {/* QR Code Buttons */}
