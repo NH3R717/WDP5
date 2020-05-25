@@ -16,7 +16,7 @@ class Test extends Component {
             QRCodeText: '',
             imageSize: '',
             FGColor: '',
-            imageURL:'',
+            imageURL: '',
         };
         this.changeHandler = this.changeHandler.bind(this);
         // console.log(this.state)
@@ -24,15 +24,15 @@ class Test extends Component {
     componentDidMount() { }
 
     getCode = (e) => {
-e.preventDefault()
+        e.preventDefault()
         let codeURL = `${this.state.url}${this.state.QRCodeText}${this.state.imageSize}${this.state.FGColor}`
 
-        // console.log(codeURL)
+        console.log(codeURL)
         // return
 
         // const codeUrl = "http://api.qrserver.com/v1/create-qr-code/?data=%2BQR+%20Code+%20Test%2B&size=100x100"
 
-        this.setState({ 
+        this.setState({
 
             imageURL: codeURL
         })
@@ -44,7 +44,7 @@ e.preventDefault()
         //     // },
         //     mode: 'cors',
         // })
-            
+
         //     .then( ()=>{ document.querySelector("#QRimage").innerHTML = codeURL})
         //     .then(console.log(codeURL))
         //     .catch(error => console.log('There was an error', error))
@@ -64,9 +64,9 @@ e.preventDefault()
             <form onSubmit={this.getCode} >
                 {/* <MediaQuery minDeviceWidth={700}> */}
                 <div id='MQHeading' style={styles.headings}>
-                <h1>Text {this.state.QRCodeText}</h1>
-                <h1>Size {this.state.imageSize}</h1>
-                <h1>Color {this.state.FGColor}</h1>
+                    <h1>Text {this.state.QRCodeText}</h1>
+                    <h1>Size {this.state.imageSize}</h1>
+                    <h1>Color {this.state.FGColor}</h1>
                 </div>
                 {/* </MediaQuery> */}
                 {/* QR Code Image and Send/Save Buttons */}
@@ -122,7 +122,7 @@ e.preventDefault()
                 <label style={styles.label}>Lt Grey</label>
 
             </form>
-            
+
         )
     }
 }

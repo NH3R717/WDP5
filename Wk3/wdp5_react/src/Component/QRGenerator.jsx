@@ -1,95 +1,58 @@
+// node
 import React, { Component } from 'react'
 
-//image files
-// import Download from '../images/download.svg'
+// src
 import QRPlaceholder from '../images/QRPlaceholder.svg'
-import '../mediaQueries.css'
 
-
-
+// smart component holding code to get qr code from user inputs
 
 class GeneratorComp extends Component {
-    //create state object that will take code input values for concatenation to a url that will be sent to the QR Code API via GET fetch()
+
+    //state object holding app variables
+
     constructor(props) {
         super(props);
         this.state = {
             url: 'https://api.qrserver.com/v1/create-qr-code/?data=',
             QRCodeText: '',
             imageSize: '',
+            fileFormat: '',
             FGColor: '',
+            BGColor: '',
+            errorCorrect: '',
+            codeBorder: '',
+            imageURL: '',
         };
         this.changeHandler = this.changeHandler.bind(this);
-        console.log(this.state)
+        // console.log(this.state)
     }
+
+    // not used
     componentDidMount() { }
 
-    getCode = () => {
+    // get user inputs stored in state and concatenating into into a url being sent to QR code api
+    getCode = (e) => {
+        e.preventDefault()
+        let codeURL = `${this.state.url}${this.state.QRCodeText}${this.state.imageSize}${this.state.fileFormat}${this.state.FGColor}${this.state.BGColor}${this.state.errorCorrect}${this.state.codeBorder}`
 
-        // let codeURL = `${this.state.url}${this.state.QRCodeText}${this.state.imageSize}${this.state.FGColor}`
+        console.log(codeURL)
 
-        const codeURL = "http://api.qrserver.com/v1/create-qr-code/?data=%2BQR+%20Code+%20Test%2B&size=100x100"
-
-        fetch(codeURL, {
-            method: 'GET',
-            // headers: {
-            //     'Content-Type': 'img'
-            // },
-            mode: 'cors',
+        // updates QR code image placeholder to image received from api
+        this.setState({
+            imageURL: codeURL
         })
-            .then(document.querySelector("#QRimage").innerHTML = codeURL)
-            .then(console.log(codeURL))
-            .catch(error => console.log('There was an error', error))
-        console.log(codeURL);
-    }
 
+        // takes values from inputs and updates state with them
+    }
     changeHandler = (event) => {
         let nam = event.target.name;
         let val = event.target.value;
         this.setState({ [nam]: val });
         // this.setState({text: event.target.value});
-        console.log(this.state)
+        // console.log(this.state)
     }
 
     render() {
-
-        // let showQRCode =
-        //     (function showQRCode() {
-
-        //         const codeUrl = "https://api.qrserver.com/v1/create-qr-code/?data=Cheesy%20Code&size=500x500&ecc=H&color=E5312C&bgcolor=0000ff&margin=20&format=png"
-
-        //         let generateHTML = ''
-
-        //         fetch(codeUrl, {
-        //             method: 'GET',
-        //             // headers: {
-        //             //     'Content-Type': 'img'
-        //             // },
-        //             mode: 'cors',
-        //         })
-        //             .then(response => {
-        //                 generateHTML(response);
-        //             })
-        //             .catch(error => console.log(`Error message ${error}`));
-
-        //         generateHTML = (data) => {
-        //             const html = `<img src=${data.url}height="175" width="175">`
-        //             console.log(data.url);
-        //             console.log(html);
-        //             console.log(codeUrl);
-        //             const qrElement = document.querySelector('#QRimage');
-        //             console.log(qrElement);
-        //             qrElement.innerHTML = html;
-        //         }
-
-        //     })()
-
-        // window.addEventListener('load', function () {
-
-        //     document.getElementById("sendButton").addEventListener("click", showQRCode);
-
-        // });
-
-        // className=''
 
         return (
             <main>
@@ -103,13 +66,15 @@ class GeneratorComp extends Component {
 
                             {/* QR Code Image */}
                             <article style={styles.imageContainer} >
-                                <div id='QRimage' src={QRPlaceholder}
-                                    height="175" width="175" alt="QR Code" style={styles.QRCode} />
+                                <img id='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} />
                             </article>
 
                             {/* QR Code Buttons */}
                             <article style={styles.qrCodeButtons}>
-                                <button id='sendButton' style={styles.buttonSend}>Get It!</button>
+                                <button id='sendButton'
+                                    style={styles.buttonSend}
+                                    onClick={this.getCode}
+                                >Get It!</button>
                                 <button id='savedButton' style={styles.buttonSave}>Saved</button>
                                 {/* <img src={Download} alt="Info" style={styles.download} /> */}
                             </article>
@@ -162,7 +127,7 @@ class GeneratorComp extends Component {
                                         <div style={styles.inputLabel}>
                                             <input
                                                 type='radio'
-                                                checked='checked'
+                                                // checked
                                                 style={styles.radioInput}
                                                 name="imageSize"
                                                 value='&size=350x350'
@@ -190,7 +155,7 @@ class GeneratorComp extends Component {
                                             <input
                                                 type='radio'
                                                 style={styles.radioInput}
-                                                checked='checked'
+                                                // checked='checked'
                                                 name="fileFormat"
                                                 value='&format=svg'
                                                 onChange={this.changeHandler}
@@ -222,53 +187,14 @@ class GeneratorComp extends Component {
 
                                     {/* QR Code Image Foreground Color */}
                                     <div style={styles.imageForegroundColor}>
-                                        <h1 style={styles.H2}>FG Color</h1>
+                                        <h1 style={styles.H2}>Code Color</h1>
                                         <div style={styles.inputLabel}>
                                             <input
                                                 type='radio'
                                                 style={styles.radioInput}
-                                                checked='checked'
+                                                // checked='checked'
                                                 name="FGColor"
-                                                value='&color=EDEDED'
-                                                onChange={this.changeHandler}
-                                            />
-                                            <label style={styles.label}>Lt Grey</label>
-                                        </div>
-                                        <div style={styles.inputLabel}>
-                                            <input
-                                                type='radio'
-                                                style={styles.radioInput}
-                                                name="FGColor"
-                                                value='&color=E9F5FF'
-                                                onChange={this.changeHandler}
-                                            />
-                                            <label style={styles.label}>Lt Blue</label>
-                                        </div>
-                                        <div style={styles.inputLabel}>
-                                            <input
-                                                type='radio'
-                                                style={styles.radioInput}
-                                                name="FGColor"
-                                                value='&color=FFB7B5'
-                                                onChange={this.changeHandler}
-                                            />
-                                            <label style={styles.label}>Lt Red</label>
-                                        </div>
-                                    </div>{/* QR Code Image Foreground Color */}
-                                </article> {/* Radio Group (3) 1 of 2 */}
-
-                                {/* Radio Group (3) 2 of 2 */}
-                                <article className='mQWebRightRadio2 '>
-                                    {/* QR Code Image Background Color */}
-                                    <div style={styles.imageBackgroundColor}>
-                                        <h1 style={styles.H2}>BG Color</h1>
-                                        <div style={styles.inputLabel}>
-                                            <input
-                                                type='radio'
-                                                style={styles.radioInput}
-                                                checked='checked'
-                                                name="BGColor"
-                                                value='&bgcolor=414141'
+                                                value='&color=414141'
                                                 onChange={this.changeHandler}
                                             />
                                             <label style={styles.label}>Dk Grey</label>
@@ -277,8 +203,8 @@ class GeneratorComp extends Component {
                                             <input
                                                 type='radio'
                                                 style={styles.radioInput}
-                                                name="BGColor"
-                                                value='&bgcolor=E5312C'
+                                                name="FGColor"
+                                                value='&color=0051c2'
                                                 onChange={this.changeHandler}
                                             />
                                             <label style={styles.label}>Dk Blue</label>
@@ -287,11 +213,50 @@ class GeneratorComp extends Component {
                                             <input
                                                 type='radio'
                                                 style={styles.radioInput}
-                                                name="BGColor"
-                                                value='&bgcolor=3F2CE5'
+                                                name="FGColor"
+                                                value='&color=c20000'
                                                 onChange={this.changeHandler}
                                             />
                                             <label style={styles.label}>Dk Red</label>
+                                        </div>
+                                    </div>{/* QR Code Image Foreground Color */}
+                                </article> {/* Radio Group (3) 1 of 2 */}
+
+                                {/* Radio Group (3) 2 of 2 */}
+                                <article className='mQWebRightRadio2 '>
+                                    {/* QR Code Image Background Color */}
+                                    <div style={styles.imageBackgroundColor}>
+                                        <h1 style={styles.H2}>Background Color</h1>
+                                        <div style={styles.inputLabel}>
+                                            <input
+                                                type='radio'
+                                                style={styles.radioInput}
+                                                // checked='checked'
+                                                name="BGColor"
+                                                value='&bgcolor=EDEDED'
+                                                onChange={this.changeHandler}
+                                            />
+                                            <label style={styles.label}>Lt Grey</label>
+                                        </div>
+                                        <div style={styles.inputLabel}>
+                                            <input
+                                                type='radio'
+                                                style={styles.radioInput}
+                                                name="BGColor"
+                                                value='&bgcolor=edf5ff'
+                                                onChange={this.changeHandler}
+                                            />
+                                            <label style={styles.label}>Lt Blue</label>
+                                        </div>
+                                        <div style={styles.inputLabel}>
+                                            <input
+                                                type='radio'
+                                                style={styles.radioInput}
+                                                name="BGColor"
+                                                value='&bgcolor=ffeded'
+                                                onChange={this.changeHandler}
+                                            />
+                                            <label style={styles.label}>Lt Red</label>
                                         </div>
                                     </div>{/* QR Code Image Background Color */}
 
@@ -303,7 +268,7 @@ class GeneratorComp extends Component {
                                             <input
                                                 type='radio'
                                                 style={styles.radioInput}
-                                                checked='checked'
+                                                // checked='checked'
                                                 name="errorCorrect"
                                                 value='&ecc=L'
                                                 onChange={this.changeHandler}
@@ -340,7 +305,7 @@ class GeneratorComp extends Component {
                                             <input
                                                 type='radio'
                                                 style={styles.radioInput}
-                                                checked='checked'
+                                                // checked='checked'
                                                 name="codeBorder"
                                                 value='&margin=8'
                                                 onChange={this.changeHandler}
@@ -385,7 +350,7 @@ const styles = {
         borderRadius: '1em'
     },
     QRCode: {
-        borderRadius: '2em'
+        borderRadius: '.8em'
     },
 
     // Send Save Buttons
@@ -397,7 +362,7 @@ const styles = {
         background: 'rgb(237 237 237)',
         color: 'rgb(081 081 081)',
         width: '4em',
-        borderRadius: '.3em'
+        borderRadius: '.1em'
     },
     buttonSave: {
         margin: '0 .25em',
