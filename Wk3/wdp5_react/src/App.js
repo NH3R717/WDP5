@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import './App.css';
-import Routes from './Component/Routes.js';
+import Routes from './Component/Routes.jsx';
 import { BrowserRouter as Router } from 'react-router-dom'
 // import { BrowserRouter as Router} from 'react-router-dom'
-import Header from './Component/StaticHeader.js'
+import Header from './Component/StaticHeader.jsx'
 // import QRGenerator from './Component/QRGenerator.js'
 // import Test from './Component/Test.js'
-import Footer from './Component/StaticFooter.js'
+import Footer from './Component/StaticFooter.jsx'
 
 class App extends Component {
 

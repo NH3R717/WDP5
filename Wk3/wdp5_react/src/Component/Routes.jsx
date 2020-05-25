@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
 
-import QRGenerator from '../Component/QRGenerator';
-import About from '../Component/About';
-import Test from '../Component/Test';
+import QRGenerator from './QRGenerator.jsx';
+import About from './About.jsx';
+import Test from './Test.jsx';
 
 class Routes extends Component {
     render() {

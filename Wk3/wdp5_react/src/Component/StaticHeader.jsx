@@ -15,9 +15,9 @@ const Header = props => {
     <div style={styles.headerDiv}>
       <NavLink to="/">
         <h1 style={styles.h1}>QR Code Generator</h1>
-        </NavLink>
+      </NavLink>
       <NavLink to="/about">
-      <img src={About} alt="Info" style={styles.ellipsis} width="30" height="30" fill="FFFFF" />
+        <img src={About} alt="Info" style={styles.ellipsis} width="30" height="30" fill="FFFFF" />
       </NavLink>
     </div>
   )
