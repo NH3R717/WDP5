@@ -1,0 +1,87 @@
+/* @media only screen and (max-width: 600px) {
+    #MQHeading {
+      display:red;
+    }
+  } */
+
+/*
+Todo
+
+center web div */
+
+@media only screen and (min-width: 768px) {
+    .mQWebAll {
+        display: inline-block;
+        /* justify-content: center; */
+        /* margin-left: 15em; */
+        
+        color: green;
+        height: auto;
+        position: relative;
+        /* border: 3px solid green;  */
+    }
+    /* left page – image & buttons */
+    .mQWebLeft {
+        /* margin-top: -10em; */
+        display: inline-block;
+        margin: 0 0em 0 0;
+        /* position: absolute; */
+        top: 50%;
+        /* left: 20%; */
+        /* -ms-transform: translate(-50%, -50%); */
+        transform: translate(-0%, -50%);
+    }
+    /* right page */
+    .mQWebRight {
+        display: inline-block;
+        /* margin-right: 3em; */
+        /* display: inherit; */
+    }
+    .mQWebRightText {
+        /* display: inherit; */
+    }
+    .mQWebRightRadio1 {
+        display: inline-block;    }
+    .mQWebRightRadio2 {
+        display: inline-block;    }
+}
+/* .radios{
+    margin: 'auto auto auto auto',
+} */
+
+/* @media only screen and (max-width: 1279px) {
+    .mQTabletAll {
+        color: blue;
+        display: block;
+    }
+    
+    .mQTabletLeft {
+        display: inherit;
+    }
+    .mQTabletTopImageButtonNameText {
+        display: inherit;
+    }
+    .mQTabletLeftRadios {
+        display: inherit;
+    }
+   
+    .mQTabletRight {
+        display: inherit;
+    }
+    .mQTabletRightText {
+        display: inherit;
+    }
+    .mQTabletRightRadios {
+        display: inherit;
+    }
+} */
+
+@media only screen and (max-width: 767px) {
+    .mQPhoneAll {
+        color: red;
+    }
+    .radios{
+        margin: auto auto .8em auto;
+       
+    }
+}
