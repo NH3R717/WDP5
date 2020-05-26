@@ -15,8 +15,8 @@ const About = props => {
             </div>
             <div style={styles.aboutText}>
                 <h1 style={styles.h1} >About</h1>
-                <h2 style={styles.h1} >This app will generate a functioning QR Code.</h2>
-                <h2 style={styles.h1} >Add title, add text and press the "Get It!" button. </h2>
+                <h2 style={styles.h2} >This app will generate a functioning QR Code.</h2>
+                <h2 style={styles.h2} >Add title, add text and press the "Get It!" button. </h2>
             </div>
             <div style={styles.h1}>
                 <NavLink to="/">
@@ -33,6 +33,7 @@ const About = props => {
 
 const styles = {
     aboutAll: {
+        margin: '1.6em 0 0 0',
         display: 'flex',
         justifyContent: 'space-between',
         color: '#414141'
@@ -40,19 +41,22 @@ const styles = {
     aboutText: {
         width: '20em',
         // display: 'flex',
-        alignContent: 'center'
+        alignContent: 'center',
+        margin: '1.6em 0 1.6em 0'
     },
     h1: {
-        // QR Code Image
+        textDecoration: 'underline',
+        fontWeight: '900',
+        margin: '0 0 .5em 0'
     },
     close: {
         margin: '0.3em 0.3em 0 0',
     },
     leftDiv: {
-        width: '60%'
+        width: '10%'
     },
     rightDiv: {
-        width: '60%'
+        width: '10%'
     }
 }
 
