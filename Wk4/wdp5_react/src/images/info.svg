@@ -1,5 +1,5 @@
 <?xml version="1.0"  encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg  width="100%" height="100%" viewBox="0 0 10 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill:#5A5A5A;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+<svg  width="100%" height="100%" viewBox="0 0 10 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <path d="M10,21L10,23C10,23.547 9.547,24 9,24L1,24C0.453,24 0,23.547 0,23L0,21C0,20.453 0.453,20 1,20L2,20L2,14L1,14C0.453,14 0,13.547 0,13L0,11C0,10.453 0.453,10 1,10L7,10C7.547,10 8,10.453 8,11L8,20L9,20C9.547,20 10,20.453 10,21ZM8,3L8,6C8,6.547 7.547,7 7,7L3,7C2.453,7 2,6.547 2,6L2,3C2,2.453 2.453,2 3,2L7,2C7.547,2 8,2.453 8,3Z" style="fill:rgb(90,90,90);fill-rule:nonzero;"/>
 </svg>

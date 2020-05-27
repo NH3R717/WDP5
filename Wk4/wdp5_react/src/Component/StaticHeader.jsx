@@ -13,9 +13,9 @@ import About from '../images/info.svg'
 const Header = props => {
   return (
     <div style={styles.headerDiv}>
-      <NavLink to="/">
+      {/* <NavLink to="/">  */}
         <h1 style={styles.h1}>QR Code Generator</h1>
-        </NavLink>
+        {/* </NavLink> */}
       <NavLink to="/about">
       <img src={About} alt="Info" style={styles.ellipsis} width="30" height="30" fill="FFFFF" />
       </NavLink>
