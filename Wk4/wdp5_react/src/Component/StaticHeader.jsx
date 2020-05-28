@@ -38,7 +38,8 @@ const styles = {
   h1: {
     fontSize: '.95em',
     // lineHeight: '120%',
-    margin: '.34em 0 0 1.1em'
+    margin: '.34em 0 0 1.1em',
+    textShadow: '.06em .06em rgba(65, 65, 65, 0.3)'
   },
   ellipsis: {
 

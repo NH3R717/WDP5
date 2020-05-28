@@ -455,11 +455,10 @@ const styles = {
     // Radio Buttons
     H2: {
         color: 'rgb(075 075 075)',
+        textShadow: '.06em .06em rgba(65, 65, 65, 0.3)'
     },
     radios: {
         // margin: 'auto auto .5em auto',
-        
-        
     },
     radioGroupDiv: {
         display: 'block',
@@ -467,7 +466,7 @@ const styles = {
     },
     inputLabel: {
         display: 'inline-block',
-        margin: '0 .2em'
+        margin: '0 .6em'
     },
     radioInput: {
         display: 'block',
@@ -478,7 +477,8 @@ const styles = {
         color: 'rgb(75 75 75)',
         margin: '0 auto',
         textAlign: 'center',
-        fontSize: '.8em'
+        fontSize: '.8em',
+        textShadow: '.06em .06em rgba(65, 65, 65, 0.3)'
     },
 
     // Radio Buttons
