@@ -25,12 +25,15 @@ class GeneratorComp extends Component {
         codeBorder: '',
         imageURL: '',
 
+
+
         // local storage array for previous codes
         savedQRCodes: [],
 
         // loading screen variables 
 
-    
+        loading: false,
+        setLoading: false
 
     };
 
@@ -48,42 +51,41 @@ class GeneratorComp extends Component {
             `${this.state.url}${this.state.QRCodeText}${this.state.imageSize}${this.state.fileFormat}${this.state.FGColor}${this.state.BGColor}${this.state.errorCorrect}${this.state.codeBorder}`
 
         console.log(codeURL)
+        console.log(this.loading)
 
         // updates QR code image placeholder to image received from api
         // this.setState({
         //     imageURL: codeURL
         // })
-        
+
         let loadScreenAndErrors = async () => {
             try {
                 await Axios
-                // let data = await Axios
+                    // let data = await Axios
                     .get(codeURL)
                     .then(response => {
                         console.log('Fresh URL', response)
-                        console.log(codeURL) 
+                        console.log(codeURL)
                         this.setState({
-                        imageURL: codeURL
+                            imageURL: codeURL
                         })
-                });
+                    });
+                this.setLoading = true;
+                console.log('74', this.loading)
             } catch (e) {
                 console.log('There was an error', e)
             }
         }
-        
+
         console.log(this.imageURL)
-            loadScreenAndErrors()
-        
+        loadScreenAndErrors()
 
         // useEffect(() => {
         //     loadScreenAndErrors()
         // }, [])
     }
 
-   
-    
-
-        // when there is a input value change [event] this function calls and updates the corresponding state value
+    // when there is a input value change [event] this function calls and updates the corresponding state value
     changeHandler = (event) => {
         let nam = event.target.name;
         let val = event.target.value;
@@ -106,7 +108,12 @@ class GeneratorComp extends Component {
 
                             {/* QR Code Image */}
                             <article style={styles.imageContainer} >
-                                <img id='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} />
+                                <img className='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} />
+
+                                {/* <div className='QRimage'>
+                                    {<img className='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} /> }
+                                    {this.loading ? (<img className='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} />) : <h3>Loading</h3>}
+                              </div> */}
                             </article>
 
                             {/* QR Code Buttons */}
