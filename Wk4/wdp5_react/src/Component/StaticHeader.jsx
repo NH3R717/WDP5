@@ -10,7 +10,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import About from '../images/info.svg'
 
-const Header = props => {
+const Header = () => {
   return (
     <div style={styles.headerDiv}>
       {/* <NavLink to="/">  */}
@@ -22,6 +22,7 @@ const Header = props => {
     </div>
   )
 }
+
 export default Header
 
 const styles = {

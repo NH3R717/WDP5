@@ -1,10 +1,8 @@
 // node
 import React, { Component } from 'react'
-// import React, { Component, useEffect } from 'react'
 
 // src
 import QRPlaceholder from '../images/QRPlaceholder.svg'
-import Axios from 'axios';
 
 // smart component holding code to get qr code from user inputs
 
@@ -12,31 +10,22 @@ class GeneratorComp extends Component {
 
     //state object holding app variables
 
-    state = {
-
-        // QR code api url variables
-        url: 'https://api.qrserver.com/v1/create-qr-code/?data=',
-        QRCodeText: '',
-        imageSize: '',
-        fileFormat: '',
-        FGColor: '',
-        BGColor: '',
-        errorCorrect: '',
-        codeBorder: '',
-        imageURL: '',
-
-        // local storage array for previous codes
-        savedQRCodes: [],
-
-        // loading screen variables 
-
-    
-
-    };
-
-    //     this.changeHandler = this.changeHandler.bind(this);
-    //     // console.log(this.state)
-    // }
+    constructor(props) {
+        super(props);
+        this.state = {
+            url: 'https://api.qrserver.com/v1/create-qr-code/?data=',
+            QRCodeText: '',
+            imageSize: '',
+            fileFormat: '',
+            FGColor: '',
+            BGColor: '',
+            errorCorrect: '',
+            codeBorder: '',
+            imageURL: '',
+        };
+        this.changeHandler = this.changeHandler.bind(this);
+        // console.log(this.state)
+    }
 
     // not used
     componentDidMount() { }
@@ -50,40 +39,12 @@ class GeneratorComp extends Component {
         console.log(codeURL)
 
         // updates QR code image placeholder to image received from api
-        // this.setState({
-        //     imageURL: codeURL
-        // })
-        
-        let loadScreenAndErrors = async () => {
-            try {
-                await Axios
-                // let data = await Axios
-                    .get(codeURL)
-                    .then(response => {
-                        console.log('Fresh URL', response)
-                        console.log(codeURL) 
-                        this.setState({
-                        imageURL: codeURL
-                        })
-                });
-            } catch (e) {
-                console.log('There was an error', e)
-            }
-        }
-        
-        console.log(this.imageURL)
-            loadScreenAndErrors()
-        
+        this.setState({
+            imageURL: codeURL
+        })
 
-        // useEffect(() => {
-        //     loadScreenAndErrors()
-        // }, [])
+        // takes values from inputs and updates state with them
     }
-
-   
-    
-
-        // when there is a input value change [event] this function calls and updates the corresponding state value
     changeHandler = (event) => {
         let nam = event.target.name;
         let val = event.target.value;
