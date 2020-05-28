@@ -15,7 +15,7 @@ center web div */
         /* justify-content: center; */
         /* margin-left: 15em; */
         
-        color: green;
+        /* color: green; */
         height: auto;
         position: relative;
         /* border: 3px solid green;  */
@@ -78,7 +78,7 @@ center web div */
 
 @media only screen and (max-width: 767px) {
     .mQPhoneAll {
-        color: red;
+        /* color: red; */
     }
     .radios{
         margin: auto auto .8em auto;

@@ -42,7 +42,7 @@ class GeneratorComp extends Component {
     // }
 
     // not used
-    componentDidMount() { }
+    // componentDidMount() { }
 
     // get user inputs stored in state and concatenating into into a url being sent to QR code api
     getCode = (e) => {
@@ -234,7 +234,7 @@ class GeneratorComp extends Component {
 
 
                                     {/* QR Code Image Foreground Color */}
-                                    <div style={styles.imageForegroundColor}>
+                                    <div style={styles.radioGroupDiv}>
                                         <h1 style={styles.H2}>Code Color</h1>
                                         <div style={styles.inputLabel}>
                                             <input
@@ -273,7 +273,7 @@ class GeneratorComp extends Component {
                                 {/* Radio Group (3) 2 of 2 */}
                                 <article className='mQWebRightRadio2 '>
                                     {/* QR Code Image Background Color */}
-                                    <div style={styles.imageBackgroundColor}>
+                                    <div style={styles.radioGroupDiv}>
                                         <h1 style={styles.H2}>Background Color</h1>
                                         <div style={styles.inputLabel}>
                                             <input
@@ -310,7 +310,7 @@ class GeneratorComp extends Component {
 
 
                                     {/* QR Code Image Error Correction */}
-                                    <div style={styles.imageCorrection}>
+                                    <div style={styles.radioGroupDiv}>
                                         <h1 style={styles.H2}>Error Correct</h1>
                                         <div style={styles.inputLabel}>
                                             <input
@@ -337,7 +337,7 @@ class GeneratorComp extends Component {
 
 
                                     {/* QR Code Image Border */}
-                                    <div style={styles.imageBorder}>
+                                    <div style={styles.radioGroupDiv}>
                                         <h1 style={styles.H2}>Code Border</h1>
                                         <div style={styles.inputLabel}>
                                             <input
@@ -410,7 +410,7 @@ const styles = {
         background: 'rgb(237 237 237)',
         color: 'rgb(081 081 081)',
         width: '4em',
-        borderRadius: '.1em'
+        borderRadius: '.3em'
     },
     buttonSave: {
         margin: '0 .25em',
@@ -454,18 +454,20 @@ const styles = {
 
     // Radio Buttons
     H2: {
+        color: 'rgb(075 075 075)',
     },
     radios: {
         // margin: 'auto auto .5em auto',
-        //     color: 'rgb(065 065 065)'
+        
+        
     },
     radioGroupDiv: {
         display: 'block',
-        margin: '.6em auto'
+        margin: '.6em auto 1em auto'
     },
     inputLabel: {
         display: 'inline-block',
-        margin: '0 .4em'
+        margin: '0 .2em'
     },
     radioInput: {
         display: 'block',
@@ -473,10 +475,10 @@ const styles = {
         margin: 'auto'
     },
     label: {
-        color: 'rgb(90 90 90)',
+        color: 'rgb(75 75 75)',
         margin: '0 auto',
         textAlign: 'center',
-        fontSize: '.7em'
+        fontSize: '.8em'
     },
 
     // Radio Buttons

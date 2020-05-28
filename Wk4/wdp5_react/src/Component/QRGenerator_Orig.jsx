@@ -415,7 +415,7 @@ const styles = {
     },
     radioGroupDiv: {
         display: 'block',
-        margin: '.6em auto'
+        margin: '.6em auto .8em auto'
     },
     inputLabel: {
         display: 'inline-block',
@@ -450,27 +450,27 @@ const styles = {
 
     // Image Colors
     imageColors: {
-        margin: '.6em auto'
+        // margin: '.6em auto'
     },
 
     // Image Foreground Color
     imageForegroundColor: {
-        margin: '.6em auto'
+        // margin: '.6em auto'
     },
 
     // Image Background Color
     imageBackgroundColor: {
-        margin: '.6em auto'
+        // margin: '.6em auto'
     },
 
     // Image Border Correction
     imageCorrectionBorder: {
-        margin: '.6em auto'
+        // margin: '.6em auto'
     },
 
     // Image Border
     imageCorrection: {
-        margin: '.6em auto'
+        // margin: '.6em auto'
     },
 
     // Image Correction
