@@ -25,8 +25,6 @@ class GeneratorComp extends Component {
         codeBorder: '',
         imageURL: '',
 
-
-
         // local storage array for previous codes
         savedQRCodes: [],
 
@@ -51,7 +49,7 @@ class GeneratorComp extends Component {
             `${this.state.url}${this.state.QRCodeText}${this.state.imageSize}${this.state.fileFormat}${this.state.FGColor}${this.state.BGColor}${this.state.errorCorrect}${this.state.codeBorder}`
 
         console.log(codeURL)
-        console.log(this.loading)
+        console.log(this.state.loading)
 
         // updates QR code image placeholder to image received from api
         // this.setState({
@@ -66,23 +64,23 @@ class GeneratorComp extends Component {
                     .then(response => {
                         console.log('Fresh URL', response)
                         console.log(codeURL)
+                        this.state.loading = true;
                         this.setState({
                             imageURL: codeURL
                         })
+                        
                     });
-                this.setLoading = true;
-                console.log('74', this.loading)
+                // this.state.loading = false;
+                console.log('74', this.state.loading)
             } catch (e) {
                 console.log('There was an error', e)
+                alert('There was an error', e)
+                
             }
         }
 
-        console.log(this.imageURL)
+        // console.log(this.imageURL)
         loadScreenAndErrors()
-
-        // useEffect(() => {
-        //     loadScreenAndErrors()
-        // }, [])
     }
 
     // when there is a input value change [event] this function calls and updates the corresponding state value
@@ -96,6 +94,8 @@ class GeneratorComp extends Component {
 
     render() {
 
+        console.log(this.state.loading)
+
         return (
             <main>
                 {/* <main className='mQWebAll mQTabletAll mQPhoneAll'> */}
@@ -108,12 +108,20 @@ class GeneratorComp extends Component {
 
                             {/* QR Code Image */}
                             <article style={styles.imageContainer} >
-                                <img className='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} />
+
+                                {/* <div>
+                                    {this.state.loading ? <h3>IS</h3> : <h3>NOT</h3>}
+
+                                </div> */}
+                                <img className='QRimage' src={(QRPlaceholder || this.state.imageURL)} height="175" width="175" alt="QR Code" style={styles.QRCode} />
+                                
+                                {/* {this.state.loading ? <h3>Loading</h3> : <img className='QRimage' src={(QRPlaceholder || this.state.imageURL)} height="175" width="175" alt="QR Code" style={styles.QRCode} />} */}
 
                                 {/* <div className='QRimage'>
                                     {<img className='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} /> }
-                                    {this.loading ? (<img className='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} />) : <h3>Loading</h3>}
-                              </div> */}
+                                    {this.state.loading ? (<img className='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} />) : <h3>Loading</h3>}
+                                </div> */}
+                                
                             </article>
 
                             {/* QR Code Buttons */}
@@ -466,7 +474,7 @@ const styles = {
     },
     inputLabel: {
         display: 'inline-block',
-        margin: '0 .6em'
+        margin: '0 .25em'
     },
     radioInput: {
         display: 'block',

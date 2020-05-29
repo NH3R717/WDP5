@@ -37,16 +37,12 @@ const styles = {
   },
   h1: {
     fontSize: '.95em',
-    // lineHeight: '120%',
     margin: '.34em 0 0 1.1em',
     textShadow: '.06em .06em rgba(65, 65, 65, 0.3)'
   },
   ellipsis: {
-
-    // color: 'rgb(065 065 065)',
     margin: '.25em .5em 0 0',
     border: 'none',
-    // color: 'rgba(21, 30, 63, 1)',
     background: 'none'
   }
 } 

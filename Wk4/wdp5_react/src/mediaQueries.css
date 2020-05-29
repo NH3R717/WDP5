@@ -22,11 +22,11 @@ center web div */
     }
     /* left page – image & buttons */
     .mQWebLeft {
-        /* margin-top: -10em; */
+        /* margin-bottom: 10em; */
         display: inline-block;
         margin: 0 0em 0 0;
         /* position: absolute; */
-        top: 50%;
+        /* top: 50%; */
         /* left: 20%; */
         /* -ms-transform: translate(-50%, -50%); */
         transform: translate(-0%, -50%);
@@ -79,6 +79,9 @@ center web div */
 @media only screen and (max-width: 767px) {
     .mQPhoneAll {
         /* color: red; */
+    }
+    .mQWebLeft{
+        /* transform: translate(-0%, -50%) */
     }
     .radios{
         margin: auto auto .8em auto;
