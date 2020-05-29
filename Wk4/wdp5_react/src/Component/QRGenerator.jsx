@@ -74,8 +74,13 @@ class GeneratorComp extends Component {
                 console.log('74', this.state.loading)
             } catch (e) {
                 console.log('There was an error', e)
-                alert('There was an error', e)
+                // alert('There was an error', e)
                 
+                let errorModal = () => {
+                    document.querySelector('#test').style.display = "inline";
+                }
+                
+                errorModal()
             }
         }
 
@@ -92,6 +97,33 @@ class GeneratorComp extends Component {
         // console.log(this.state)
     }
 
+    // errorModal = () => {
+    //     alert('Error Modal')
+    // }
+    
+    // errorModal()
+
+//    let modalAction = () => {
+
+//         const modal = document.querySelector("#mascotModal");
+    
+//         document.querySelector("#mascotButton").addEventListener("click", function() {
+//             modal.style.display = "block";
+//         });
+    
+//         document.querySelector(".modalClose").addEventListener("click", function() {
+//             modal.style.display = "none";
+//         });
+    
+//         window.addEventListener("click", function(event) {
+//             if (event.target == modal) {
+//                 modal.style.display = "none";
+//             }
+//         });
+    
+//     };
+
+    
     render() {
 
         console.log(this.state.loading)
@@ -105,20 +137,21 @@ class GeneratorComp extends Component {
                     <div className='mQWebAll mQTabletAll mQPhoneAll'>
                         {/* QR Code Image and Send/Save Buttons */}
                         <section className='mQWebLeft ' id='mQImageButton' style={styles.qrCodeImageButtons}>
+                        <div>
+                                {this.state.loading ? <h3>IS</h3> : <h3>NOT</h3>}
+                                <h3 id="test" style={styles.errorTest}>ERROR</h3>
 
+                                </div>
                             {/* QR Code Image */}
                             <article style={styles.imageContainer} >
-
-                                {/* <div>
-                                    {this.state.loading ? <h3>IS</h3> : <h3>NOT</h3>}
-
-                                </div> */}
-                                <img className='QRimage' src={(QRPlaceholder || this.state.imageURL)} height="175" width="175" alt="QR Code" style={styles.QRCode} />
+                                <img className='QRimage' src={(this.state.imageURL ||  QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} />
                                 
                                 {/* {this.state.loading ? <h3>Loading</h3> : <img className='QRimage' src={(QRPlaceholder || this.state.imageURL)} height="175" width="175" alt="QR Code" style={styles.QRCode} />} */}
 
                                 {/* <div className='QRimage'>
+
                                     {<img className='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} /> }
+
                                     {this.state.loading ? (<img className='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} />) : <h3>Loading</h3>}
                                 </div> */}
                                 
@@ -130,7 +163,7 @@ class GeneratorComp extends Component {
                                     style={styles.buttonSend}
                                     onClick={this.getCode}
                                 >Get It!</button>
-                                <button id='savedButton' style={styles.buttonSave}>Saved</button>
+                                {/* <button id='savedButton' style={styles.buttonSave}>Saved</button> */}
                                 {/* <img src={Download} alt="Info" style={styles.download} /> */}
                             </article>
                         </section>
@@ -394,6 +427,9 @@ class GeneratorComp extends Component {
 export default GeneratorComp
 
 const styles = {
+    errorTest: {
+display: 'none'
+    },
     inputForm: {
         // QR Code Image
     },
@@ -491,46 +527,46 @@ const styles = {
 
     // Radio Buttons
     // Image Size and Type
-    imageSizeType: {
-    },
+    // imageSizeType: {
+    // },
 
-    // Image Size
-    imageSize: {
+    // // Image Size
+    // imageSize: {
 
-    },
+    // },
 
-    // Radio Type
-    imageType: {
+    // // Radio Type
+    // imageType: {
 
-    },
+    // },
 
-    // Image Colors
-    imageColors: {
-        margin: '.6em auto'
-    },
+    // // Image Colors
+    // imageColors: {
+    //     margin: '.6em auto'
+    // },
 
-    // Image Foreground Color
-    imageForegroundColor: {
-        margin: '.6em auto'
-    },
+    // // Image Foreground Color
+    // imageForegroundColor: {
+    //     margin: '.6em auto'
+    // },
 
-    // Image Background Color
-    imageBackgroundColor: {
-        margin: '.6em auto'
-    },
+    // // Image Background Color
+    // imageBackgroundColor: {
+    //     margin: '.6em auto'
+    // },
 
-    // Image Border Correction
-    imageCorrectionBorder: {
-        margin: '.6em auto'
-    },
+    // // Image Border Correction
+    // imageCorrectionBorder: {
+    //     margin: '.6em auto'
+    // },
 
-    // Image Border
-    imageCorrection: {
-        margin: '.6em auto'
-    },
+    // // Image Border
+    // imageCorrection: {
+    //     margin: '.6em auto'
+    // },
 
-    // Image Correction
-    imageBorder: {
+    // // Image Correction
+    // imageBorder: {
 
-    }
+    // }
 }
