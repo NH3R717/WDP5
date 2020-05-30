@@ -12,7 +12,7 @@ import About from '../images/info.svg'
 
 const Header = () => {
   return (
-    <div style={styles.headerDiv}>
+    <div id='header' style={styles.headerDiv}>
       {/* <NavLink to="/">  */}
         <h1 style={styles.h1}>QR Code Generator</h1>
         {/* </NavLink> */}
@@ -27,12 +27,17 @@ export default Header
 
 const styles = {
   headerDiv: {
-    color: 'rgb(065 065 065)',
     display: 'flex',
+    width: '100%',
+    // position: 'fixed',
+    // top: '0',
+    // margin: '0',
+    // height: 'auto',
+    color: 'rgb(065 065 065)',
     padding: '.4em 0',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    background: 'rgba(213, 213, 213, 0.6)',
+    background: 'rgba(213, 213, 213, 1)',
     borderBottom: 'solid .03em'
   },
   h1: {

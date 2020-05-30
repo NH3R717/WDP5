@@ -18,7 +18,7 @@ class App extends Component {
                 <Router>
                     <Header />
                     <Routes />
-                    <Footer />
+                    <Footer style={styles.footer} />
                 </Router>
             </main>
 
@@ -28,4 +28,13 @@ class App extends Component {
 
 export default App;
 
+const styles = {
+    footer: {
+        color: 'green',
+        position: 'absolute',
+        bottom: '0',
+        height: '16em',
+        padding: '0 0 2em 0'
+    }
+}
 

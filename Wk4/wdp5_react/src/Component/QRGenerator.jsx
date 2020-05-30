@@ -143,7 +143,7 @@ class GeneratorComp extends Component {
                         {/* QR Code Image and Send/Save Buttons */}
                         <section className='mQWebLeft ' id='mQImageButton' style={styles.qrCodeImageButtons}>
                             <div>
-                                {this.state.loading ? <h3>IS</h3> : <h3>NOT</h3>}
+                                {/* {this.state.loading ? <h3>IS</h3> : <h3>NOT</h3>} */}
                                 <h3 id="test" style={styles.errorTest}>ERROR</h3>
 
                             </div>
@@ -185,7 +185,7 @@ class GeneratorComp extends Component {
                             <section style={styles.nameTextFields}>
 
                                 {/* QR Code Name Input */}
-                                <article style={styles.codeName}>
+                                {/* <article style={styles.codeName}>
                                     <input type='text'
                                         style={styles.nameFieldInput}
                                         name="QRCodeName"
@@ -193,7 +193,7 @@ class GeneratorComp extends Component {
                                         onChange={this.changeHandler}
                                     />
 
-                                </article>
+                                </article> */}
 
                                 {/* QR Code Text Input */}
                                 <article style={styles.codeText}>
@@ -443,10 +443,11 @@ const styles = {
         display: 'none'
     },
     inputForm: {
-        // QR Code Image
+        // height: '22em',
+        // margin: '3.4em 0 0 0'
     },
     imageContainer: {
-        margin: '1.3em auto 1em auto',
+        margin: '.8em auto 1em auto',
         paddingTop: '.38em',
         height: '195px',
         width: '195px',
@@ -514,7 +515,7 @@ const styles = {
         textShadow: '.06em .06em rgba(65, 65, 65, 0.3)'
     },
     radios: {
-        // margin: 'auto auto .5em auto',
+        // margin: 'auto auto 2em auto',
     },
     radioGroupDiv: {
         display: 'block',

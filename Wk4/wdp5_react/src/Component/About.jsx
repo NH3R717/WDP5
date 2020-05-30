@@ -9,21 +9,23 @@ import Close from '../images/close.svg'
 
 const About = props => {
     return (
-        <div style={styles.aboutAll}>
+        <div style={styles.aboutAllDiv}>
             <div style={styles.leftDiv}>
 
             </div>
-            <div style={styles.aboutText}>
+            <section style={styles.center}>
+            <article style={styles.aboutTextDiv}>
                 <h1 style={styles.h1} >About</h1>
                 <h2 style={styles.h2} >This app will generate a functioning QR Code.</h2>
                 <h2 style={styles.h2} >Add title, add text and press the "Get It!" button. </h2>
-            </div>
-            <div style={styles.h1}>
+            </article>
+            <article style={styles.h1}>
                 <NavLink to="/">
                     {/* <img src={IoMdClose} alt="Close" style={styles.close} width="30" height="30" /> */}
                     <img src={Close} alt="Close" style={styles.close} width="30" height="30" />
                 </NavLink>
-            </div>
+            </article>
+            </section>
             <div style={styles.rightDiv}>
 
             </div>
@@ -32,14 +34,17 @@ const About = props => {
 }
 
 const styles = {
-    aboutAll: {
+    aboutAllDiv: {
         margin: '1.6em 0 0 0',
         display: 'flex',
         justifyContent: 'space-between',
         color: '#414141'
     },
-    aboutText: {
-        width: '20em',
+    center: {
+        display: 'flex'
+    },
+    aboutTextDiv: {
+        // width: '20em',
         // display: 'flex',
         alignContent: 'center',
         margin: '1.6em 0 1.6em 0'

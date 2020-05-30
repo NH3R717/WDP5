@@ -19,11 +19,15 @@ export default Footer
 
 const styles = {
   footerDiv: {
-    // marginTop: '16em',
-    color: 'rgb(065 065 065)',
     display: 'flex',
+    width: '100%',
+    position: 'fixed',
+    bottom: '0',
+    margin: '0',
+    height: 'auto',
+    color: 'rgb(065 065 065)',
     padding: '.3em 0',
-    background: 'rgba(213, 213, 213, 0.6)',
+    background: 'rgba(213, 213, 213, 1)',
     borderTop: 'solid .03em'
   },
   h3: {

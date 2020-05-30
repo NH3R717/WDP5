@@ -410,7 +410,7 @@ const styles = {
     H2: {
     },
     radios: {
-        // margin: 'auto auto .5em auto',
+        margin: 'auto auto .5em auto',
         //     color: 'rgb(065 065 065)'
     },
     radioGroupDiv: {

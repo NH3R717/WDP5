@@ -1,17 +1,8 @@
-/* @media only screen and (max-width: 600px) {
-    #MQHeading {
-      display:red;
-    }
-  } */
-
-/*
-Todo
-
-center web div */
-
+/* wide format */
 @media only screen and (min-width: 768px) {
     .mQWebAll {
         display: inline-block;
+        height: 20em; 
         /* justify-content: center; */
         /* margin-left: 15em; */
         
@@ -45,6 +36,10 @@ center web div */
     .mQWebRightRadio2 {
         display: inline-block;    }
 }
+.radios{
+    margin: 0 0 1.2em 0;
+   
+}
 /* .radios{
     margin: 'auto auto auto auto',
 } */
@@ -76,15 +71,20 @@ center web div */
     }
 } */
 
+/* narrow format */
 @media only screen and (max-width: 767px) {
     .mQPhoneAll {
         /* color: red; */
+        height: 22em;
     }
     .mQWebLeft{
         /* transform: translate(-0%, -50%) */
     }
+    #header{
+        margin: 0 0 0 0
+    }
     .radios{
-        margin: auto auto .8em auto;
+        margin: 0 0 2em 0;
        
     }
 }
