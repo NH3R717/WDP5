@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 
 // src
 import QRPlaceholder from '../images/QRPlaceholder.svg'
-import Axios from 'axios';
+// import Axios from 'axios';
 
 // smart component holding code to get qr code from user inputs
 
@@ -52,40 +52,45 @@ class GeneratorComp extends Component {
         console.log(this.state.loading)
 
         // updates QR code image placeholder to image received from api
-        // this.setState({
-        //     imageURL: codeURL
-        // })
 
-        let loadScreenAndErrors = async () => {
-            try {
-                await Axios
-                    // let data = await Axios
-                    .get(codeURL)
-                    .then(response => {
-                        console.log('Fresh URL', response)
-                        console.log(codeURL)
-                        this.state.loading = true;
-                        this.setState({
-                            imageURL: codeURL
-                        })
-                        
-                    });
-                // this.state.loading = false;
-                console.log('74', this.state.loading)
-            } catch (e) {
-                console.log('There was an error', e)
-                // alert('There was an error', e)
-                
-                let errorModal = () => {
-                    document.querySelector('#test').style.display = "inline";
-                }
-                
-                errorModal()
-            }
+        if (this.state.imageURL !== codeURL) {
+
+            this.setState({
+                imageURL: codeURL,
+                loading: true
+            })
         }
 
-        // console.log(this.imageURL)
-        loadScreenAndErrors()
+        // let loadScreenAndErrors = async () => {
+        //     try {
+        //         await Axios
+        //             // let data = await Axios
+        //             .get(codeURL)
+        //             .then(response => {
+        //                 console.log('Fresh URL', response)
+        //                 console.log(codeURL)
+        //                 this.state.loading = true;
+        //                 this.setState({
+        //                     imageURL: codeURL
+        //                 })
+
+        //             });
+        //         // this.state.loading = false;
+        //         console.log('74', this.state.loading)
+        //     } catch (e) {
+        //         console.log('There was an error', e)
+        //         // alert('There was an error', e)
+
+        //         let errorModal = () => {
+        //             document.querySelector('#test').style.display = "inline";
+        //         }
+
+        //         errorModal()
+        //     }
+        // }
+
+        // // console.log(this.imageURL)
+        // loadScreenAndErrors()
     }
 
     // when there is a input value change [event] this function calls and updates the corresponding state value
@@ -100,30 +105,30 @@ class GeneratorComp extends Component {
     // errorModal = () => {
     //     alert('Error Modal')
     // }
-    
+
     // errorModal()
 
-//    let modalAction = () => {
+    //    let modalAction = () => {
 
-//         const modal = document.querySelector("#mascotModal");
-    
-//         document.querySelector("#mascotButton").addEventListener("click", function() {
-//             modal.style.display = "block";
-//         });
-    
-//         document.querySelector(".modalClose").addEventListener("click", function() {
-//             modal.style.display = "none";
-//         });
-    
-//         window.addEventListener("click", function(event) {
-//             if (event.target == modal) {
-//                 modal.style.display = "none";
-//             }
-//         });
-    
-//     };
+    //         const modal = document.querySelector("#mascotModal");
 
-    
+    //         document.querySelector("#mascotButton").addEventListener("click", function() {
+    //             modal.style.display = "block";
+    //         });
+
+    //         document.querySelector(".modalClose").addEventListener("click", function() {
+    //             modal.style.display = "none";
+    //         });
+
+    //         window.addEventListener("click", function(event) {
+    //             if (event.target == modal) {
+    //                 modal.style.display = "none";
+    //             }
+    //         });
+
+    //     };
+
+
     render() {
 
         console.log(this.state.loading)
@@ -137,15 +142,22 @@ class GeneratorComp extends Component {
                     <div className='mQWebAll mQTabletAll mQPhoneAll'>
                         {/* QR Code Image and Send/Save Buttons */}
                         <section className='mQWebLeft ' id='mQImageButton' style={styles.qrCodeImageButtons}>
-                        <div>
+                            <div>
                                 {this.state.loading ? <h3>IS</h3> : <h3>NOT</h3>}
                                 <h3 id="test" style={styles.errorTest}>ERROR</h3>
 
-                                </div>
+                            </div>
                             {/* QR Code Image */}
                             <article style={styles.imageContainer} >
-                                <img className='QRimage' src={(this.state.imageURL ||  QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} />
-                                
+
+                                <img className='QRimage'
+                                    onLoad={() => { this.setState({ loading: false }) }}
+                                    src={(this.state.imageURL || QRPlaceholder)}
+                                    height="175" width="175" alt="QR Code" style={styles.QRCode}
+                                />
+
+                                {/* <img className='QRimage' src={(this.state.imageURL ||  QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} /> */}
+
                                 {/* {this.state.loading ? <h3>Loading</h3> : <img className='QRimage' src={(QRPlaceholder || this.state.imageURL)} height="175" width="175" alt="QR Code" style={styles.QRCode} />} */}
 
                                 {/* <div className='QRimage'>
@@ -154,7 +166,7 @@ class GeneratorComp extends Component {
 
                                     {this.state.loading ? (<img className='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} />) : <h3>Loading</h3>}
                                 </div> */}
-                                
+
                             </article>
 
                             {/* QR Code Buttons */}
@@ -428,7 +440,7 @@ export default GeneratorComp
 
 const styles = {
     errorTest: {
-display: 'none'
+        display: 'none'
     },
     inputForm: {
         // QR Code Image
