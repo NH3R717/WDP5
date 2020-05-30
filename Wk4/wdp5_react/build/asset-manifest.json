@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/NH3R717/WDP5/static/css/main.91a1178a.chunk.css",
+    "main.js": "/NH3R717/WDP5/static/js/main.4f4945a5.chunk.js",
+    "main.js.map": "/NH3R717/WDP5/static/js/main.4f4945a5.chunk.js.map",
+    "runtime-main.js": "/NH3R717/WDP5/static/js/runtime-main.2d0bb07e.js",
+    "runtime-main.js.map": "/NH3R717/WDP5/static/js/runtime-main.2d0bb07e.js.map",
+    "static/js/2.8f7d94f6.chunk.js": "/NH3R717/WDP5/static/js/2.8f7d94f6.chunk.js",
+    "static/js/2.8f7d94f6.chunk.js.map": "/NH3R717/WDP5/static/js/2.8f7d94f6.chunk.js.map",
+    "index.html": "/NH3R717/WDP5/index.html",
+    "precache-manifest.d463f49f51ec88f0322c5f19839f1a49.js": "/NH3R717/WDP5/precache-manifest.d463f49f51ec88f0322c5f19839f1a49.js",
+    "service-worker.js": "/NH3R717/WDP5/service-worker.js",
+    "static/css/main.91a1178a.chunk.css.map": "/NH3R717/WDP5/static/css/main.91a1178a.chunk.css.map",
+    "static/js/2.8f7d94f6.chunk.js.LICENSE.txt": "/NH3R717/WDP5/static/js/2.8f7d94f6.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/NH3R717/WDP5/static/media/Comfortaa-Regular.d350ce24.ttf",
+    "static/media/QRPlaceholder.svg": "/NH3R717/WDP5/static/media/QRPlaceholder.72950f71.svg",
+    "static/media/close.svg": "/NH3R717/WDP5/static/media/close.79d274c7.svg",
+    "static/media/info.svg": "/NH3R717/WDP5/static/media/info.cc3e92b4.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d0bb07e.js",
+    "static/js/2.8f7d94f6.chunk.js",
+    "static/css/main.91a1178a.chunk.css",
+    "static/js/main.4f4945a5.chunk.js"
+  ]
+}
