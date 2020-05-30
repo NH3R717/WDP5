@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom'
+import {HashRouter as Route, Switch } from 'react-router-dom'
 
 import QRGenerator from '../Component/QRGenerator';
 import About from '../Component/About';
