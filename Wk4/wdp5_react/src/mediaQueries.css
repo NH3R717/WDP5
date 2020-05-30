@@ -2,15 +2,12 @@
 @media only screen and (min-width: 768px) {
     .mQWebAll {
         display: inline-block;
-        height: 20em; 
-        /* justify-content: center; */
-        /* margin-left: 15em; */
-        
-        /* color: green; */
-        height: auto;
-        position: relative;
-        /* border: 3px solid green;  */
+        height: 80%; 
+        /* position: relative; */
+        position: absolute;
+  top: 20%; left: 0; bottom: 0%; right: 0;
     }
+    
     /* left page – image & buttons */
     .mQWebLeft {
         /* margin-bottom: 10em; */

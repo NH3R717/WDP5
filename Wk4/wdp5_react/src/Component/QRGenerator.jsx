@@ -443,6 +443,7 @@ const styles = {
         display: 'none'
     },
     inputForm: {
+        margin: 'auto'
         // height: '22em',
         // margin: '3.4em 0 0 0'
     },
