@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
 import Routes from './Component/Routes.jsx';
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 // import { BrowserRouter as Router} from 'react-router-dom'
 import Header from './Component/StaticHeader.jsx'
 // import QRGenerator from './Component/QRGenerator.js'
@@ -18,7 +18,7 @@ class App extends Component {
                 <Router>
                     <Header />
                     <Routes />
-                    <Footer style={styles.footer} />
+                    <Footer />
                 </Router>
             </main>
 
@@ -27,14 +27,4 @@ class App extends Component {
 }
 
 export default App;
-
-const styles = {
-    footer: {
-        color: 'green',
-        position: 'absolute',
-        bottom: '0',
-        height: '16em',
-        padding: '0 0 2em 0'
-    }
-}
 

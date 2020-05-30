@@ -14,17 +14,23 @@ const About = props => {
 
             </div>
             <section style={styles.center}>
-            <article style={styles.aboutTextDiv}>
-                <h1 style={styles.h1} >About</h1>
-                <h2 style={styles.h2} >This app will generate a functioning QR Code.</h2>
-                <h2 style={styles.h2} >Add title, add text and press the "Get It!" button. </h2>
-            </article>
-            <article style={styles.h1}>
-                <NavLink to="/">
-                    {/* <img src={IoMdClose} alt="Close" style={styles.close} width="30" height="30" /> */}
-                    <img src={Close} alt="Close" style={styles.close} width="30" height="30" />
-                </NavLink>
-            </article>
+                <article style={styles.aboutTextDiv}>
+                    <header style={styles.aboutHeading}>
+                        <div></div>
+                        <h1 style={styles.h1} >About</h1>
+                        <NavLink to="/">
+                        <img src={Close} alt="Close" style={styles.close} width="30" height="30" />
+                        </NavLink>
+                    </header>
+                    <h2 style={styles.h2} >This app will generate a functioning QR Code.</h2>
+                    <h2 style={styles.h2} >Add text, select option and press the "Get It!" button. </h2>
+                </article>
+                <article style={styles.h1}>
+                    {/* <NavLink to="/">
+                        <img src={IoMdClose} alt="Close" style={styles.close} width="30" height="30" />
+                        <img src={Close} alt="Close" style={styles.close} width="30" height="30" />
+                    </NavLink> */}
+                </article>
             </section>
             <div style={styles.rightDiv}>
 
@@ -40,22 +46,33 @@ const styles = {
         justifyContent: 'space-between',
         color: '#414141'
     },
+    aboutHeading: {
+        display: 'flex',
+        justifyContent: 'space-between',
+    },
     center: {
-        display: 'flex'
+        // display: 'flex'
+        maxWidth: '400px',
+        padding: '0 .8em',
+        borderRadius: '.4em',
+        border: 'solid .03em',
+        background: 'rgba(213, 213, 213, .7)'
     },
     aboutTextDiv: {
         // width: '20em',
         // display: 'flex',
         alignContent: 'center',
-        margin: '1.6em 0 1.6em 0'
+        margin: '1.6em 0 1em 0'
     },
     h1: {
+        
         textDecoration: 'underline',
         fontWeight: '900',
-        margin: '0 0 .5em 0'
+        margin: '0 0 .5em 2em'
     },
     close: {
-        margin: '0.3em 0.3em 0 0',
+        margin: '-.7em 0.3em 0 0',
+        transform: 'translate(-15%, -70%)'
     },
     leftDiv: {
         width: '10%'
