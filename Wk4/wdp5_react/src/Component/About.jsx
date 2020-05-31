@@ -1,3 +1,11 @@
+/* 
+   • Umholtz, Tommy
+   • Full Sail University
+   • Web Design and Development, Bachelors of Science – Online
+   • Web Design Portfolio 5 (WDPV)
+   • Week 2 – Development Phase 1
+   */
+
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 // import { IoMdClose } from 'react-icons/io'

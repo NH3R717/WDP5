@@ -1,19 +1,22 @@
+/* 
+   • Umholtz, Tommy
+   • Full Sail University
+   • Web Design and Development, Bachelors of Science – Online
+   • Web Design Portfolio 5 (WDPV)
+   • Week 2 – Development Phase 1
+   */
+
 // node
 import React, { Component } from 'react'
-// import React, { Component, useEffect } from 'react'
 
 // src
 import QRPlaceholder from '../images/QRPlaceholder.svg'
-// import Axios from 'axios';
 
 // smart component holding code to get qr code from user inputs
-
 class GeneratorComp extends Component {
 
     //state object holding app variables
-
     state = {
-
         // QR code api url variables
         url: 'https://api.qrserver.com/v1/create-qr-code/?data=',
         QRCodeText: '',
@@ -25,22 +28,10 @@ class GeneratorComp extends Component {
         codeBorder: '',
         imageURL: '',
 
-        // local storage array for previous codes
-        savedQRCodes: [],
-
         // loading screen variables 
-
         loading: false,
         setLoading: false
-
     };
-
-    //     this.changeHandler = this.changeHandler.bind(this);
-    //     // console.log(this.state)
-    // }
-
-    // not used
-    // componentDidMount() { }
 
     // get user inputs stored in state and concatenating into into a url being sent to QR code api
     getCode = (e) => {
@@ -48,49 +39,13 @@ class GeneratorComp extends Component {
         let codeURL =
             `${this.state.url}${this.state.QRCodeText}${this.state.imageSize}${this.state.fileFormat}${this.state.FGColor}${this.state.BGColor}${this.state.errorCorrect}${this.state.codeBorder}`
 
-        console.log(codeURL)
-        console.log(this.state.loading)
-
         // updates QR code image placeholder to image received from api
-
         if (this.state.imageURL !== codeURL) {
-
             this.setState({
                 imageURL: codeURL,
                 loading: true
             })
         }
-
-        // let loadScreenAndErrors = async () => {
-        //     try {
-        //         await Axios
-        //             // let data = await Axios
-        //             .get(codeURL)
-        //             .then(response => {
-        //                 console.log('Fresh URL', response)
-        //                 console.log(codeURL)
-        //                 this.state.loading = true;
-        //                 this.setState({
-        //                     imageURL: codeURL
-        //                 })
-
-        //             });
-        //         // this.state.loading = false;
-        //         console.log('74', this.state.loading)
-        //     } catch (e) {
-        //         console.log('There was an error', e)
-        //         // alert('There was an error', e)
-
-        //         let errorModal = () => {
-        //             document.querySelector('#test').style.display = "inline";
-        //         }
-
-        //         errorModal()
-        //     }
-        // }
-
-        // // console.log(this.imageURL)
-        // loadScreenAndErrors()
     }
 
     // when there is a input value change [event] this function calls and updates the corresponding state value
@@ -98,42 +53,11 @@ class GeneratorComp extends Component {
         let nam = event.target.name;
         let val = event.target.value;
         this.setState({ [nam]: val });
-        // this.setState({text: event.target.value});
-        // console.log(this.state)
     }
 
-    // errorModal = () => {
-    //     alert('Error Modal')
-    // }
-
-    // errorModal()
-
-    //    let modalAction = () => {
-
-    //         const modal = document.querySelector("#mascotModal");
-
-    //         document.querySelector("#mascotButton").addEventListener("click", function() {
-    //             modal.style.display = "block";
-    //         });
-
-    //         document.querySelector(".modalClose").addEventListener("click", function() {
-    //             modal.style.display = "none";
-    //         });
-
-    //         window.addEventListener("click", function(event) {
-    //             if (event.target == modal) {
-    //                 modal.style.display = "none";
-    //             }
-    //         });
-
-    //     };
-
-
+       // react life cycle component – render
     render() {
 
-        console.log(this.state.loading)
-
-        // react life cycle component – render
         return (
             <main>
                 {/* <main className='mQWebAll mQTabletAll mQPhoneAll'> */}
@@ -161,8 +85,6 @@ class GeneratorComp extends Component {
                                     style={styles.buttonSend}
                                     onClick={this.getCode}
                                 >Get It!</button>
-                                {/* <button id='savedButton' style={styles.buttonSave}>Saved</button> */}
-                                {/* <img src={Download} alt="Info" style={styles.download} /> */}
                             </article>
                         </section>
 
@@ -171,17 +93,6 @@ class GeneratorComp extends Component {
                         {/* QR Code name and text input fields */}
                         <div className='mQWebRight '>
                             <section style={styles.nameTextFields}>
-
-                                {/* QR Code Name Input */}
-                                {/* <article style={styles.codeName}>
-                                    <input type='text'
-                                        style={styles.nameFieldInput}
-                                        name="QRCodeName"
-                                        placeholder=" Code Name"
-                                        onChange={this.changeHandler}
-                                    />
-                                </article> */}
-
                                 {/* QR Code Text Input */}
                                 <article style={styles.codeText}>
                                     <textarea
@@ -386,7 +297,6 @@ class GeneratorComp extends Component {
                                             <input
                                                 type='radio'
                                                 style={styles.radioInput}
-                                                // checked='checked'
                                                 name="codeBorder"
                                                 value='&margin=8'
                                                 onChange={this.changeHandler}
@@ -403,13 +313,12 @@ class GeneratorComp extends Component {
                                             />
                                             <label style={styles.label}>thick</label>
                                         </div>
-                                    </div>{/* QR Code Image Border */}
-                                </article>{/* Radio Group (3) 2 of 2 */}
+                                    </div>
+                                </article>
                             </section>
                         </div>
                     </div>
                 </form>
-
 
             </main >
 
