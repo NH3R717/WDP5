@@ -1,87 +1,78 @@
 /* wide format */
+
 @media only screen and (min-width: 768px) {
     .mQWebAll {
         display: inline-block;
-        height: 80%; 
-        /* position: relative; */
+        height: 80%;
         position: absolute;
-  top: 20%; left: 0; bottom: 0%; right: 0;
+        top: 20%;
+        left: 0;
+        bottom: 0%;
+        right: 0;
     }
-    
     /* left page – image & buttons */
     .mQWebLeft {
-        /* margin-bottom: 10em; */
         display: inline-block;
         margin: 0 0em 0 0;
-        /* position: absolute; */
-        /* top: 50%; */
-        /* left: 20%; */
-        /* -ms-transform: translate(-50%, -50%); */
         transform: translate(-0%, -50%);
     }
     /* right page */
     .mQWebRight {
         display: inline-block;
-        /* margin-right: 3em; */
-        /* display: inherit; */
     }
     .mQWebRightText {
-        /* display: inherit; */
+
     }
     .mQWebRightRadio1 {
-        display: inline-block;    }
+        display: inline-block;
+    }
     .mQWebRightRadio2 {
-        display: inline-block;    }
+        display: inline-block;
+    }
 }
-.radios{
+
+.radios {
     margin: 0 0 1.2em 0;
-   
 }
-/* .radios{
-    margin: 'auto auto auto auto',
-} */
 
 /* @media only screen and (max-width: 1279px) {
     .mQTabletAll {
-        color: blue;
-        display: block;
+
     }
     
     .mQTabletLeft {
-        display: inherit;
+
     }
     .mQTabletTopImageButtonNameText {
-        display: inherit;
+
     }
     .mQTabletLeftRadios {
-        display: inherit;
+
     }
-   
     .mQTabletRight {
-        display: inherit;
+
     }
     .mQTabletRightText {
-        display: inherit;
+
     }
     .mQTabletRightRadios {
-        display: inherit;
+
     }
 } */
 
 /* narrow format */
+
 @media only screen and (max-width: 767px) {
     .mQPhoneAll {
-        /* color: red; */
         height: 22em;
     }
-    .mQWebLeft{
-        /* transform: translate(-0%, -50%) */
+    .mQWebLeft {
+
     }
-    #header{
-        margin: 0 0 0 0
+    #header {
+        margin: auto
     }
-    .radios{
+    .radios {
         margin: 0 0 2em 0;
-       
     }
 }
