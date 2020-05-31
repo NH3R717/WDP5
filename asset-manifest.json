@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.3a213c54.chunk.css",
+    "main.css": "./static/css/main.2b8be3fe.chunk.css",
     "main.js": "./static/js/main.5bf43bb0.chunk.js",
     "main.js.map": "./static/js/main.5bf43bb0.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.2745c5dd.js",
@@ -8,9 +8,9 @@
     "static/js/2.8f7d94f6.chunk.js": "./static/js/2.8f7d94f6.chunk.js",
     "static/js/2.8f7d94f6.chunk.js.map": "./static/js/2.8f7d94f6.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.4b2d66b8be95247c80744e6aec82994f.js": "./precache-manifest.4b2d66b8be95247c80744e6aec82994f.js",
+    "precache-manifest.68c658652acf877f10e7bfb3705ff107.js": "./precache-manifest.68c658652acf877f10e7bfb3705ff107.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.3a213c54.chunk.css.map": "./static/css/main.3a213c54.chunk.css.map",
+    "static/css/main.2b8be3fe.chunk.css.map": "./static/css/main.2b8be3fe.chunk.css.map",
     "static/js/2.8f7d94f6.chunk.js.LICENSE.txt": "./static/js/2.8f7d94f6.chunk.js.LICENSE.txt",
     "static/media/App.css": "./static/media/Comfortaa-Regular.d350ce24.ttf",
     "static/media/QRPlaceholder.svg": "./static/media/QRPlaceholder.72950f71.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.2745c5dd.js",
     "static/js/2.8f7d94f6.chunk.js",
-    "static/css/main.3a213c54.chunk.css",
+    "static/css/main.2b8be3fe.chunk.css",
     "static/js/main.5bf43bb0.chunk.js"
   ]
 }
