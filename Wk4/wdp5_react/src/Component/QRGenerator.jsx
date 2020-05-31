@@ -133,6 +133,7 @@ class GeneratorComp extends Component {
 
         console.log(this.state.loading)
 
+        // react life cycle component – render
         return (
             <main>
                 {/* <main className='mQWebAll mQTabletAll mQPhoneAll'> */}
@@ -140,33 +141,18 @@ class GeneratorComp extends Component {
                 {/* Appliction Form */}
                 <form style={styles.inputForm}>
                     <div className='mQWebAll mQTabletAll mQPhoneAll'>
+
+
+                        {/* QR Code Image and Send/Save Buttons */}
                         {/* QR Code Image and Send/Save Buttons */}
                         <section className='mQWebLeft ' id='mQImageButton' style={styles.qrCodeImageButtons}>
-                            <div>
-                                {/* {this.state.loading ? <h3>IS</h3> : <h3>NOT</h3>} */}
-                                <h3 id="test" style={styles.errorTest}>ERROR</h3>
-
-                            </div>
                             {/* QR Code Image */}
                             <article style={styles.imageContainer} >
-
                                 <img className='QRimage'
                                     onLoad={() => { this.setState({ loading: false }) }}
                                     src={(this.state.imageURL || QRPlaceholder)}
                                     height="175" width="175" alt="QR Code" style={styles.QRCode}
                                 />
-
-                                {/* <img className='QRimage' src={(this.state.imageURL ||  QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} /> */}
-
-                                {/* {this.state.loading ? <h3>Loading</h3> : <img className='QRimage' src={(QRPlaceholder || this.state.imageURL)} height="175" width="175" alt="QR Code" style={styles.QRCode} />} */}
-
-                                {/* <div className='QRimage'>
-
-                                    {<img className='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} /> }
-
-                                    {this.state.loading ? (<img className='QRimage' src={(this.state.imageURL || QRPlaceholder)} height="175" width="175" alt="QR Code" style={styles.QRCode} />) : <h3>Loading</h3>}
-                                </div> */}
-
                             </article>
 
                             {/* QR Code Buttons */}
@@ -180,6 +166,8 @@ class GeneratorComp extends Component {
                             </article>
                         </section>
 
+
+                        {/* QR Code name and text input fields */}
                         {/* QR Code name and text input fields */}
                         <div className='mQWebRight '>
                             <section style={styles.nameTextFields}>
@@ -192,7 +180,6 @@ class GeneratorComp extends Component {
                                         placeholder=" Code Name"
                                         onChange={this.changeHandler}
                                     />
-
                                 </article> */}
 
                                 {/* QR Code Text Input */}
@@ -207,6 +194,8 @@ class GeneratorComp extends Component {
                                 </article>
                             </section>
 
+
+                            {/* QR Code Radio Buttons (all) */}
                             {/* QR Code Radio Buttons (all) */}
                             <section className='radios' style={styles.radios}>
                                 {/* Radio Group (3) 1 of 2 */}
@@ -227,7 +216,6 @@ class GeneratorComp extends Component {
                                         <div style={styles.inputLabel}>
                                             <input
                                                 type='radio'
-                                                // checked
                                                 style={styles.radioInput}
                                                 name="imageSize"
                                                 value='&size=350x350'
@@ -247,7 +235,6 @@ class GeneratorComp extends Component {
                                         </div >
                                     </div>{/* QR Code Image Size */}
 
-
                                     {/* QR Code Image File Format */}
                                     <div id="format" style={styles.radioGroupDiv}>
                                         <h2 style={styles.H2}>File Format</h2>
@@ -256,7 +243,6 @@ class GeneratorComp extends Component {
                                                 type='radio'
                                                 // type='color'
                                                 style={styles.radioInput}
-                                                // checked='checked'
                                                 name="fileFormat"
                                                 value='&format=svg'
                                                 onChange={this.changeHandler}
@@ -285,7 +271,6 @@ class GeneratorComp extends Component {
                                         </div>
                                     </div>{/* QR Code Image File Format */}
 
-
                                     {/* QR Code Image Foreground Color */}
                                     <div style={styles.radioGroupDiv}>
                                         <h1 style={styles.H2}>Code Color</h1>
@@ -293,7 +278,6 @@ class GeneratorComp extends Component {
                                             <input
                                                 type='radio'
                                                 style={styles.radioInput}
-                                                // checked='checked'
                                                 name="FGColor"
                                                 value='&color=414141'
                                                 onChange={this.changeHandler}
@@ -332,7 +316,6 @@ class GeneratorComp extends Component {
                                             <input
                                                 type='radio'
                                                 style={styles.radioInput}
-                                                // checked='checked'
                                                 name="BGColor"
                                                 value='&bgcolor=EDEDED'
                                                 onChange={this.changeHandler}
@@ -361,7 +344,6 @@ class GeneratorComp extends Component {
                                         </div>
                                     </div>{/* QR Code Image Background Color */}
 
-
                                     {/* QR Code Image Error Correction */}
                                     <div style={styles.radioGroupDiv}>
                                         <h1 style={styles.H2}>Error Correct</h1>
@@ -369,7 +351,6 @@ class GeneratorComp extends Component {
                                             <input
                                                 type='radio'
                                                 style={styles.radioInput}
-                                                // checked='checked'
                                                 name="errorCorrect"
                                                 value='&ecc=L'
                                                 onChange={this.changeHandler}
@@ -387,7 +368,6 @@ class GeneratorComp extends Component {
                                             <label style={styles.label}>high</label>
                                         </div>
                                     </div>{/* QR Code Image Error Correction */}
-
 
                                     {/* QR Code Image Border */}
                                     <div style={styles.radioGroupDiv}>
@@ -430,6 +410,7 @@ class GeneratorComp extends Component {
                     </div>
                 </form>
 
+
             </main >
 
         )
@@ -444,8 +425,6 @@ const styles = {
     },
     inputForm: {
         margin: 'auto'
-        // height: '22em',
-        // margin: '3.4em 0 0 0'
     },
     imageContainer: {
         margin: '.8em auto 1em auto',
@@ -516,7 +495,6 @@ const styles = {
         textShadow: '.06em .06em rgba(65, 65, 65, 0.3)'
     },
     radios: {
-        // margin: 'auto auto 2em auto',
     },
     radioGroupDiv: {
         display: 'block',
@@ -538,49 +516,4 @@ const styles = {
         fontSize: '.8em',
         textShadow: '.06em .06em rgba(65, 65, 65, 0.3)'
     },
-
-    // Radio Buttons
-    // Image Size and Type
-    // imageSizeType: {
-    // },
-
-    // // Image Size
-    // imageSize: {
-
-    // },
-
-    // // Radio Type
-    // imageType: {
-
-    // },
-
-    // // Image Colors
-    // imageColors: {
-    //     margin: '.6em auto'
-    // },
-
-    // // Image Foreground Color
-    // imageForegroundColor: {
-    //     margin: '.6em auto'
-    // },
-
-    // // Image Background Color
-    // imageBackgroundColor: {
-    //     margin: '.6em auto'
-    // },
-
-    // // Image Border Correction
-    // imageCorrectionBorder: {
-    //     margin: '.6em auto'
-    // },
-
-    // // Image Border
-    // imageCorrection: {
-    //     margin: '.6em auto'
-    // },
-
-    // // Image Correction
-    // imageBorder: {
-
-    // }
 }

@@ -3,11 +3,10 @@ import { NavLink } from 'react-router-dom'
 // import { IoMdClose } from 'react-icons/io'
 import Close from '../images/close.svg'
 
-
 // assets
-// import Close from '../images/close.svg'
 
 const About = props => {
+    // react life cycle component – render
     return (
         <div style={styles.aboutAllDiv}>
             <div style={styles.leftDiv}>
@@ -26,10 +25,6 @@ const About = props => {
                     <h2 style={styles.h2} >Add text, select option and press the "Get It!" button. </h2>
                 </article>
                 <article style={styles.h1}>
-                    {/* <NavLink to="/">
-                        <img src={IoMdClose} alt="Close" style={styles.close} width="30" height="30" />
-                        <img src={Close} alt="Close" style={styles.close} width="30" height="30" />
-                    </NavLink> */}
                 </article>
             </section>
             <div style={styles.rightDiv}>
@@ -51,7 +46,6 @@ const styles = {
         justifyContent: 'space-between',
     },
     center: {
-        // display: 'flex'
         maxWidth: '400px',
         padding: '0 .8em',
         borderRadius: '.4em',
@@ -59,8 +53,6 @@ const styles = {
         background: 'rgba(213, 213, 213, .7)'
     },
     aboutTextDiv: {
-        // width: '20em',
-        // display: 'flex',
         alignContent: 'center',
         margin: '1.6em 0 1em 0'
     },

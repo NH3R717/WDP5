@@ -29,10 +29,6 @@ const styles = {
   headerDiv: {
     display: 'flex',
     width: '100%',
-    // position: 'fixed',
-    // top: '0',
-    // margin: '0',
-    // height: 'auto',
     color: 'rgb(065 065 065)',
     padding: '.4em 0',
     flexDirection: 'row',

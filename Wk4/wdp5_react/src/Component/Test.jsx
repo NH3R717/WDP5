@@ -130,7 +130,7 @@ class Test extends Component {
 const styles = {
 
     // headings: {
-    //     color: 'lightgreen'
+
     // },
     imageContainer: {
         margin: '1em auto 1em auto',
@@ -141,13 +141,13 @@ const styles = {
         borderRadius: '1em'
     },
     codeName: {
-        // QR Code Image
+        
     },
     radioInput: {
-        // QR Code Image
+        
     },
     buttonSend: {
-        // QR Code Image
+        
     },
 }
 
