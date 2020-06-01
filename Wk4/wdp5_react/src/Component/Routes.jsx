@@ -1,3 +1,10 @@
+/* 
+   • Umholtz, Tommy
+   • Full Sail University
+   • Web Design and Development, Bachelors of Science – Online
+   • Web Design Portfolio 5 (WDPV)
+   */
+
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 

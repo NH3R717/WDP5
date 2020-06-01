@@ -3,7 +3,6 @@
    • Full Sail University
    • Web Design and Development, Bachelors of Science – Online
    • Web Design Portfolio 5 (WDPV)
-   • Week 2 – Development Phase 1
    */
 
 //https://api.qrserver.com/v1/create-qr-code/?data=Cheesy%20Code&size=500x500&ecc=H&color=E5312C&bgcolor=0000ff&margin=20&format=svg
